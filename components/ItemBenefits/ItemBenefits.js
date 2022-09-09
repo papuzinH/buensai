@@ -1,5 +1,5 @@
 import React from 'react';
-import grid from '../../styles/grid.module.css';
+import grid from '../../styles/grid.module.css'
 import styles from './itemBenefits.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
