@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Navbar from '../components/Navbar/Navbar';
-import Hero from '../components/Hero/Hero'
+import Hero from '../components/Hero/Hero';
 
 export default function Home() {
   return (
@@ -14,8 +14,8 @@ export default function Home() {
         <link rel="stylesheet" href="https://use.typekit.net/wxl3mdd.css"></link>
         <link rel="stylesheet" href="https://use.typekit.net/jfy4rte.css"></link>
       </Head>
-      <Hero/>
       <Navbar />
+      <Hero />
     </>
   );
 }
