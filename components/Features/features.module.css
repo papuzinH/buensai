@@ -1,0 +1,71 @@
+.features_container{
+    padding:0em 0em 0em 3em;
+    display: flex;
+}
+
+.section_title,
+.descrip {
+  font-family: circe, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  color: #10222b;
+}
+
+.section_title {
+  margin: 30px 0px;
+}
+
+.section_title span {
+  color: #95ab63;
+}
+
+.descrip {
+  font-size: 16px;
+  line-height: 19px;
+  width: 75%;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: flex;
+  margin: auto;
+
+  border: solid 1px #89b26f;
+  border-radius: 0.5em;
+  background-color: transparent;
+  padding: 16px 32px;
+  text-align: center;
+
+  font-family: circe, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 25px;
+  color:#89B26F;
+
+  margin-bottom: 1em;
+
+  cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #89B26F;
+    color:#10222b;
+}
+
+.bonsaimg{
+    position: absolute !important;
+    top: 15% !important;
+    left: -5% !important;
+    box-sizing: unset !important;
+    padding: 0 !important;
+    border: none !important;
+    margin: unset !important;
+    width: 745px !important;
+    height: 659px !important;
+    display: unset !important;
+    min-width: unset !important;
+    max-width: unset !important;
+    min-height: unset !important;
+    max-height: unset !important;
+}

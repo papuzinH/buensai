@@ -1,6 +1,6 @@
 import React from 'react';
-import grid from '../../styles/grid.module.css';
-import styles from './itemBenefits.module.css';
+//import grid from '../../styles/grid.module.css';
+import styles from './itembenefits.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ItemBenefits = ({ icon, title, text }) => {
