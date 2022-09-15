@@ -29,34 +29,22 @@ const Navbar = () => {
       <ul className={styles.social}>
         <li>
           <a className={styles.itemsNav}>
-            <FontAwesomeIcon
-              icon={faSearch}
-              style={{ fontSize: 15, color: 'white' }}
-            />
+            <FontAwesomeIcon icon={faSearch} style={{ fontSize: 15, color: 'white' }} />
           </a>
         </li>
         <li>
           <a className={styles.itemsNav}>
-            <FontAwesomeIcon
-              icon={faFacebook}
-              style={{ fontSize: 15, color: 'white' }}
-            />
+            <FontAwesomeIcon icon={faFacebook} style={{ fontSize: 15, color: 'white' }} />
           </a>
         </li>
         <li>
           <a className={styles.itemsNav}>
-            <FontAwesomeIcon
-              icon={faInstagram}
-              style={{ fontSize: 15, color: 'white' }}
-            />
+            <FontAwesomeIcon icon={faInstagram} style={{ fontSize: 15, color: 'white' }} />
           </a>
         </li>
         <li>
           <a className={styles.itemsNav}>
-            <FontAwesomeIcon
-              icon={faCartShopping}
-              style={{ fontSize: 15, color: 'white' }}
-            />
+            <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: 15, color: 'white' }} />
           </a>
         </li>
       </ul>

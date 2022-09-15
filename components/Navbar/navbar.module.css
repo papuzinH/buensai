@@ -9,6 +9,7 @@
     justify-content: space-between;
     align-items: center;
     position: absolute;
+    z-index: 10;
   }
   
   .menu {
@@ -37,6 +38,8 @@
     display: flex;
     list-style: none;
   }
+
+  .social .itemsNav svg {height: 15px;}
   
   .itemsNav {
     color: #f6ffe0;
@@ -47,5 +50,6 @@
     font: normal normal 300 14px/18px Europa;
   }
   
-  .itemsNav:hover {border-bottom: 1px solid #F6FFE0; cursor: pointer; transition: 1s;}
+  .itemsNav:hover {cursor: pointer; transition: 1s;}
+  .menuItems .itemsNav:hover {border-bottom: 1px solid #F6FFE0; }
   

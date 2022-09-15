@@ -1,75 +1,103 @@
 /* reset button */
-.cta button {
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: auto;
-    overflow: visible;
+.cta .btn {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
 
-    background: transparent;
+  background: transparent;
 
-    /* inherit font & color from ancestor */
-    color: inherit;
-    font: inherit;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
 
-    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-    line-height: normal;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
 
-    /* Corrects font smoothing for webkit */
-    -webkit-font-smoothing: inherit;
-    -moz-osx-font-smoothing: inherit;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
 
-    /* Corrects inability to style clickable `input` types in iOS */
-    -webkit-appearance: none;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
 }
 
 /* Remove excess padding and border in Firefox 4+ */
-.cta button::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+.cta .btn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
 /* fin reset button */
 
-
 /* reset h2 */
-.cta h2{
-    margin-block-start: 0;
-    margin-block-end: 0;
+.cta h2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 /* fin reset h2 */
 
-.hero{
-    background-image: url('../../public/assets/hero.png');
-    background-size: 1280px 935px;
-    width:1280px;
-    height:935px ;
-    box-shadow: inset 0px 10px 560px 20px black;
-    display: flex;
+.hero {
+  background-image: url('../../public/assets/hero.png');
+  box-shadow: inset 0px 10px 560px 20px black;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
-.cta{
-    margin: 18em auto; 
-    /* antes margin: auto auto; para que se centre en la totalidad del hero, pero quedaba raro*/
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    gap: 2em;
+.cta {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 0;
+  height: 250px;
 }
 
-.cta h2, .cta span, .cta button{
-    color: #f6ffe0;
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: transparent linear-gradient(180deg, #000000b5 0%, #2a2a2a57 56%, #54545400 100%) 0% 0%
+    no-repeat padding-box;
 }
 
-.cta h2{
-    font: normal normal 300 40px/51px Europa;
+.cta h2,
+.cta p,
+.cta .btn {
+  color: #f6ffe0;
 }
 
-.cta button{
-    border: 2px solid #f6ffe0;
-    padding: 1em 4em;
-    width: fit-content;
-    color: #f6ffe3;
-    border-radius: 12px;
-    cursor: pointer;
+.cta h2 {
+  font: normal normal 300 60px Europa;
+  line-height: 66px;
+}
+
+.cta p {
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: 200;
+}
+
+.cta .btn {
+  color: #f6ffe3;
+  background-color: #95ab63;
+  border: 2px solid #95ab63;
+  font-size: 25px;
+  padding: 17px 57px;
+  border-radius: 15px;
+  transition: 0.2s;
+}
+
+.cta .btn:hover {
+  cursor: pointer;
+  border-color: #f6ffe0;
+  background: none;
+  transition: 0.2s;
 }
