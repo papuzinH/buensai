@@ -3,8 +3,16 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Navbar from '../components/Navbar/Navbar';
 import Hero from '../components/Hero/Hero';
+import { useState } from 'react';
+import CardFeature from '../components/CardFeature/CardFeature';
 
 export default function Home() {
+  const [cardsFeature, setCardsFeature] = useState(['Destacados', 'Nuevos Bonsais', 'Descuentos']);
+
+  const showCardsFeature = () => {
+    return cardsFeature.map((card, index) => <CardFeature key={index} text={card} />);
+  };
+
   return (
     <>
       <Head>
@@ -16,6 +24,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <Hero />
+      <div className={styles['cardsFeatureContainer']}>{showCardsFeature()}</div>
     </>
   );
 }

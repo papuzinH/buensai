@@ -1,0 +1,58 @@
+/* reset button */
+.card button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+/* Remove excess padding and border in Firefox 4+ */
+.card button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+/* fin reset button */
+
+.card{
+    font: normal normal 100 33px/15px Europa;
+}
+
+.card:nth-of-type(1){
+    background-image: url('../../public/assets/feature-1.png');
+    width: 290px;
+    height: 290px;
+}
+
+.card:nth-of-type(2){
+    background-image: url('../../public/assets/feature-2.png');
+    width: 160px;
+    height: 272px;
+}
+
+.card:nth-of-type(3){
+    background-image: url('../../public/assets/feature-3.png');
+    width: 144px;
+    height: 272px;
+}
+
+.card button{
+    color: #cdf46c;
+    font: normal normal 100 15px/15px Europa;
+}
