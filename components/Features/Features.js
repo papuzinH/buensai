@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './Features.module.css';
+import styles from './features.module.css';
 import CardFeature from '../CardFeatures/CardFeatures';
-import ItemBenefits from '../ItemBenefits/itemBenefits';
+import ItemBenefits from '../ItemBenefits/ItemBenefits';
 
 import Image from 'next/image';
 import bonsai from '../../public/assets/bonsaifeature.png';
