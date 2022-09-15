@@ -34,6 +34,16 @@
     font: normal normal 100 33px/15px Europa;
 }
 
+.textAndButton{
+    margin-top: 142px;
+    margin-left: 22px;
+}
+
+.card:nth-of-type(3) .textAndButton{
+    text-align: right;
+    padding-right: 10px;
+}
+
 .card:nth-of-type(1){
     background-image: url('../../public/assets/feature-1.png');
     width: 290px;
@@ -42,13 +52,13 @@
 
 .card:nth-of-type(2){
     background-image: url('../../public/assets/feature-2.png');
-    width: 160px;
-    height: 272px;
+    width: 386px;
+    height: 290px;
 }
 
 .card:nth-of-type(3){
     background-image: url('../../public/assets/feature-3.png');
-    width: 144px;
+    width: 272px;
     height: 272px;
 }
 
