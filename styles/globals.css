@@ -2,8 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -15,7 +15,16 @@ a {
   box-sizing: border-box;
 }
 
-p{ margin: 0;}
+p,a,ul,li {
+  margin: 0;
+  padding: 0;
+}
+
+.inner {
+  max-width: 1136px;
+  margin: auto;
+  position: relative;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
