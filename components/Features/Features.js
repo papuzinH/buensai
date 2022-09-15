@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './features.module.css';
-import CardFeature from '../CardFeatures/CardFeatures';
 import ItemBenefits from '../ItemBenefits/ItemBenefits';
-
 import Image from 'next/image';
 import bonsai from '../../public/assets/bonsaifeature.png';
 
@@ -10,10 +8,6 @@ const Features = ({ dataItems }) => (
   <>
     <div className={`${styles['features_container']}`}>
       <div className={`${styles['content']}`}>
-        <CardFeature />
-        <CardFeature />
-        <CardFeature />
-
         <h2 className={`${styles['section_title']}`}>
           Conocé los beneficios de <span>nuestras plantas</span>
         </h2>
