@@ -48,7 +48,7 @@ export default function Home() {
         <link rel="stylesheet" href="https://use.typekit.net/jfy4rte.css"></link>
       </Head>
       <Navbar />
-      <Features dataItems={dataItems}/>
+      <Features dataItems={dataItems} />
       <Footer />
     </>
   );
