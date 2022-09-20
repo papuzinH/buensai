@@ -9,7 +9,7 @@ const Hero = () => {
       <div className={styles['cta']}>
         <h2>Trae paz y armonía a tu hogar</h2>
         <p>Conectáte con la naturaleza</p>
-        <a className={styles['btn']}>Descúbrelo</a>
+        <a href='#features' className={styles['btn']}>Descúbrelo</a>
       </div>
     </div>
   );

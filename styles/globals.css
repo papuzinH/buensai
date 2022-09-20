@@ -4,6 +4,9 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -32,6 +35,6 @@ p,a,ul,li {
   }
   body {
     color: white;
-    background: #fff;
+    background: #F9F4EF;
   }
 }
