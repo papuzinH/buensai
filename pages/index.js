@@ -6,6 +6,7 @@ import Features from '../components/Features/Features';
 import Footer from '../components/Footer/Footer';
 import ItemBenefits from '../components/ItemBenefits/ItemBenefits';
 import Hero from '../components/Hero/Hero';
+import CardFeature from '../components/CardFeature/CardFeature';
 import { useState } from 'react';
 
 
