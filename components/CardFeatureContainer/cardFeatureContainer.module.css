@@ -1,0 +1,8 @@
+.cardsFeatureContainer{
+    position: absolute;
+    top: -145px;
+    left: 0;
+    right: 0;
+    grid-auto-rows: 272px;
+    z-index: 2;
+  }

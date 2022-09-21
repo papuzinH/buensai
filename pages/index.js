@@ -6,8 +6,9 @@ import Features from '../components/Features/Features';
 import Footer from '../components/Footer/Footer';
 import ItemBenefits from '../components/ItemBenefits/ItemBenefits';
 import Hero from '../components/Hero/Hero';
-import { useState } from 'react';
 import CardFeature from '../components/CardFeature/CardFeature';
+import { useState } from 'react';
+
 
 import { faLightbulb, faSmile } from '@fortawesome/free-regular-svg-icons';
 
@@ -41,8 +42,6 @@ const dataItems = [
 ];
 
 export default function Home() {
-  const [cardsFeature, setCardsFeature] = useState(['Destacados', 'Nuevos Bonsais', 'Descuentos']);
-
   const showCardsFeature = () => {
     return cardsFeature.map((card, index) => <CardFeature key={index} text={card} />);
   };
@@ -58,7 +57,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <Hero />
-      <div className={styles['cardsFeatureContainer']}>{showCardsFeature()}</div>
+      
       <Features dataItems={dataItems} />
       <Footer />
     </>

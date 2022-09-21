@@ -1,4 +1,4 @@
-.grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-column-gap: 30px; grid-row-gap: 40px; }
+.grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-column-gap: 16px; grid-row-gap: 40px; }
 .row_gap_20 { grid-row-gap: 20px;}
 
 .long_gap { grid-column-gap: 110px; }
