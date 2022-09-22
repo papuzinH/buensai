@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Navbar from '../components/Navbar/Navbar';
 import HeroProducts from '../components/HeroProducts/HeroProducts';
 import Footer from '../components/Footer/Footer';
+import Paginador from '../components/Paginador/Paginador'
 
 const Products = () => {
   const dataPage = { page: 'products' };
@@ -17,6 +18,8 @@ const Products = () => {
       </Head>
       <Navbar page={dataPage} />
       <HeroProducts />
+      <Paginador/>
+      <Footer/>
     </>
   );
 };
