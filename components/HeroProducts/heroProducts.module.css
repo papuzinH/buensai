@@ -1,0 +1,25 @@
+.heroimg {
+  position: relative !important;
+  height: 360px !important;
+}
+
+.title {
+  position: absolute;
+  font-family: 'circe';
+  font-weight: lighter;
+  font-size: 60px;
+  left: 80px;
+  top: 30px;
+  color: #f6ffe0;
+}
+
+.subtitle {
+  position: absolute;
+  font-family: 'circe';
+  font-weight: lighter;
+  font-size: 40px;
+  left: 80px;
+  top: 150px;
+  width: 30%;
+  color: #f6ffe0;
+}
