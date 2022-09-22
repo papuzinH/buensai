@@ -9,7 +9,6 @@ import Hero from '../components/Hero/Hero';
 import CardFeature from '../components/CardFeature/CardFeature';
 import { useState } from 'react';
 
-
 import { faLightbulb, faSmile } from '@fortawesome/free-regular-svg-icons';
 
 import { faWind, faLeaf } from '@fortawesome/free-solid-svg-icons';
@@ -46,6 +45,8 @@ export default function Home() {
     return cardsFeature.map((card, index) => <CardFeature key={index} text={card} />);
   };
 
+  const dataPage = { page: 'index' };
+
   return (
     <>
       <Head>
@@ -55,9 +56,9 @@ export default function Home() {
         <link rel="stylesheet" href="https://use.typekit.net/wxl3mdd.css"></link>
         <link rel="stylesheet" href="https://use.typekit.net/jfy4rte.css"></link>
       </Head>
-      <Navbar />
+      <Navbar page={dataPage} />
       <Hero />
-      
+
       <Features dataItems={dataItems} />
       <Footer />
     </>
