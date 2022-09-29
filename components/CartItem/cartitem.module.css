@@ -1,0 +1,34 @@
+.cont_cart{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border: .5px solid #95AB63;
+    margin: 25px 80px;
+    padding: 0px 2em;
+    font-family: 'Europa';
+    font-size: 30px;
+}
+
+.name{
+    font-weight: lighter;
+}
+
+.price{
+    color: #95AB63;
+    margin-left: 5em;
+}
+
+.cont_cart p{
+    width: 60%;
+} 
+
+.close{
+    width: 60px;
+    cursor: pointer;
+}
+
+.close:hover{
+    background-color: black;
+    color:white;
+    border-radius: 50%;
+}
