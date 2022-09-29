@@ -1,16 +1,14 @@
 import React from 'react';
 import styles from './counter.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 const Counter = () => {
   return (
     <div className={`${styles['counter']}`}>
-      <a className={`${styles['plusminus']}`}>
-        <p>-</p>
-      </a>
+      <FontAwesomeIcon icon={faMinus} className={`${styles['plusminus']}`} />
       <p>1</p>
-      <a className={`${styles['plusminus']}`}>
-        <p>+</p>
-      </a>
+      <FontAwesomeIcon icon={faPlus} className={`${styles['plusminus']}`} />
     </div>
   );
 };

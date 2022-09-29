@@ -3,7 +3,7 @@
     justify-content: space-around;
     align-items: center;
     border: .5px solid #95AB63;
-    padding: 0px 1em;
+    padding: 1em;
     margin: 1em 0px;
     font-family: 'Europa';
     font-size: 30px;
@@ -11,6 +11,7 @@
 
 .name{
     font-weight: lighter;
+    text-align: start !important;
 }
 
 .price{
@@ -20,6 +21,7 @@
 
 .cont_cart p{
     width: 60%;
+    text-align: center;
 } 
 
 .close{
