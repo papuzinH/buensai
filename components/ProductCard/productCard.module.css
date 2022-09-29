@@ -17,3 +17,6 @@
     font-weight: bold;
     color: #95AB63;
 }
+.productCard p{
+    padding-top: .5em;
+}
