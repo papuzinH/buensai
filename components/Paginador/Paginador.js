@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './paginador.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const Paginador = () => {
   return (
@@ -15,7 +15,7 @@ const Paginador = () => {
         </li>
         <li>
           <a>
-            <FontAwesomeIcon icon={faAngleRight} style={{ fontSize: 15, color: '#95AB63' }}/>
+            <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: 15, color: '#95AB63' }}/>
           </a>
         </li>
       </ul>
