@@ -3,8 +3,8 @@
     justify-content: space-around;
     align-items: center;
     border: .5px solid #95AB63;
-    margin: 25px 80px;
-    padding: 0px 2em;
+    padding: 0px 1em;
+    margin: 1em 0px;
     font-family: 'Europa';
     font-size: 30px;
 }

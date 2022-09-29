@@ -6,10 +6,10 @@ import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 
 const CartItem = ({ /*imagen,*/ name, price }) => {
   return (
-    <div className={`${styles['cont_cart']}`}>
+    <div className={`${styles['cont_cart']} inner`}>
       <p className={`${styles['name']}`}>{name}</p>
       <Counter />
-      <p className={`${styles['price']}`}>{price}</p>
+      <p className={`${styles['price']}`}>${price}</p>
       <FontAwesomeIcon icon={faCircleXmark} className={`${styles['close']}`} />
     </div>
   );
