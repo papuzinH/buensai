@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from './infoCheckout.module.css';
-
+function date() {}
 const InfoCheckout = () => {
   return (
     <div className={`${styles['container']} inner`}>
       <form>
-        <input type="text" placeholder="Nombre" required />
-        <input type="text" placeholder="Apellido" required />
+        <div>
+          <input type="text" placeholder="Nombre" required />
+          <input type="text" placeholder="Apellido" required />
+        </div>
         <input type="tel" placeholder="Telefono" required />
         <input type="text" placeholder="Localidad" required />
         <input type="text" placeholder="Direccion" required />
@@ -17,9 +19,17 @@ const InfoCheckout = () => {
           <option>Mercado pago</option>
         </select>
         <input type="number" placeholder="Numero de tarjeta" required />
-        <input type="date" placeholder="Fecha de expiracion" required />
-        <input type="number" placeholder="Codigo de seguridad" required />
-        <input type="number" placeholder="Dni del titular" required />
+        <div>
+          <input
+            type="text"
+            placeholder="Fecha de expiracion"
+            required
+            onFocus={(e) => (e.target.type = 'date')}
+            onBlur={(e) => (e.target.type = 'text')}
+          />
+          <input type="number" placeholder="Codigo de seguridad" required />
+        </div>
+        <input type="number" placeholder="DNI del titular" required />
       </form>
     </div>
   );
