@@ -129,8 +129,3 @@
 }
 
 /* todo lo anterior creo es del setup inicial, lo dejo por si las dudas  */
-.cardsFeatureContainer{
-  display: flex;
-  justify-content: center;
-  gap: .3em;
-}

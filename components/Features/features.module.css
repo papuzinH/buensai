@@ -1,5 +1,5 @@
 .features_container{
-    padding:0em 0em 0em 3em;
+    padding-top:200px;
     display: flex;
 }
 
@@ -23,13 +23,12 @@
 .descrip {
   font-size: 16px;
   line-height: 19px;
-  width: 75%;
   margin-bottom: 40px;
 }
 
 .btn {
   display: flex;
-  margin: auto;
+  margin: 70px auto 0 auto;
 
   border: solid 1px #89b26f;
   border-radius: 0.5em;
@@ -42,30 +41,21 @@
   font-style: normal;
   font-size: 25px;
   color:#89B26F;
-
-  margin-bottom: 1em;
-
   cursor: pointer;
 }
 
 .btn:hover{
     background-color: #89B26F;
-    color:#10222b;
+    color:#fff;
 }
 
 .bonsaimg{
-    position: absolute !important;
-    top: 15% !important;
-    left: -5% !important;
-    box-sizing: unset !important;
-    padding: 0 !important;
-    border: none !important;
-    margin: unset !important;
-    width: 745px !important;
-    height: 659px !important;
-    display: unset !important;
-    min-width: unset !important;
-    max-width: unset !important;
-    min-height: unset !important;
-    max-height: unset !important;
+    position: absolute;
+    right: -250px;
+    top: 150px;
+}
+
+.features_section {
+  position: relative;
+  padding-bottom: 120px;
 }

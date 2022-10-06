@@ -1,51 +1,98 @@
-
-
 .nav {
-    background-color: transparent;
-    width: 100%;
-    padding: 35px 80px;
-    border-bottom: 1px solid #707070;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-  }
-  
-  .menu {
-    width: 40%;
-  }
-  .logo {
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-  }
-  
-  .logo a {
-    color: #f6ffe0;
-    font: normal normal 300 40px/51px Europa;
-  }
-  
-  .social {
-    width: 40%;
-    justify-content: flex-end;
-  }
-  
-  .menuItems,
-  .social {
-    display: flex;
-    list-style: none;
-  }
-  
-  .itemsNav {
-    color: #f6ffe0;
-    padding: 10px 0;
-    margin: 0 20px;
-    font-size: 14px;
-    text-transform: uppercase;
-    font: normal normal 300 14px/18px Europa;
-  }
-  
-  .itemsNav:hover {border-bottom: 1px solid #F6FFE0; cursor: pointer; transition: 1s;}
-  
+  background-color: transparent;
+  width: 100%;
+  padding: 35px 80px;
+  border-bottom: 1px solid #707070;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+}
+
+.navProducts {
+  background-color: white;
+  color: #10222b !important;
+  width: 100%;
+  padding: 35px 80px;
+  border-bottom: 1px solid #707070;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.menu {
+  width: 40%;
+}
+.logo,
+.logoProducts {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.logo a,
+.logoProducts a {
+  color: #f6ffe0;
+  font: normal normal 300 40px/51px Europa;
+}
+
+.logoProducts a {
+  color: #10222b !important;
+}
+
+.social {
+  width: 40%;
+  justify-content: flex-end;
+}
+
+.menuItems,
+.social {
+  display: flex;
+  list-style: none;
+}
+
+.social .itemsNav svg,
+.itemsNavDark svg {
+  height: 15px;
+}
+
+.itemsNav,
+.itemsNavDark {
+  color: #f6ffe0;
+  padding: 10px 0;
+  margin: 0 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font: normal normal 300 14px/18px Europa;
+}
+
+.itemsNavDark {
+  color: #10222b;
+}
+
+.itemsNavDark svg {
+  color: #10222b !important;
+}
+
+.menuItems li:first-child .itemsNav {
+  margin-left: 0;
+}
+.social li:last-child .itemsNav {
+  margin-right: 0;
+}
+
+.itemsNav:hover, .itemsNavDark:hover {
+  cursor: pointer;
+  transition: 1s;
+}
+.menuItems .itemsNav:hover {
+  border-bottom: 1px solid #f6ffe0;
+}
+
+.itemsNavDark:hover {
+  border-bottom: 1px solid #10222b;
+}

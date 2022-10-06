@@ -79,6 +79,8 @@ export default function Home() {
     getProducts();
   }, []);
 
+  const dataPage = { page: 'index' };
+
   return (
     <>
       <Head>
@@ -88,7 +90,7 @@ export default function Home() {
         <link rel="stylesheet" href="https://use.typekit.net/wxl3mdd.css"></link>
         <link rel="stylesheet" href="https://use.typekit.net/jfy4rte.css"></link>
       </Head>
-      <Navbar />
+      <Navbar page={dataPage} />
       <Hero />
       <div className={styles['cardsFeatureContainer']}>{showCardsFeature()}</div>
       <Features dataItems={dataItems} />
