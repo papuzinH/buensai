@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Navbar from '../components/Navbar/Navbar';
-import HeroProducts from '../components/HeroProducts/HeroProducts';
 import Footer from '../components/Footer/Footer';
+import ProductItemContainer from '../components/ProductItemContainer/ProductItemContainer';
 
 const SingleProduct = () => {
   const dataPage = { page: 'products' };
@@ -16,6 +16,7 @@ const SingleProduct = () => {
         <link rel="stylesheet" href="https://use.typekit.net/jfy4rte.css"></link>
       </Head>
       <Navbar page={dataPage} />
+      <ProductItemContainer />
       <Footer />
     </>
   );

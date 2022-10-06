@@ -13,6 +13,7 @@ import { faLightbulb, faSmile } from '@fortawesome/free-regular-svg-icons';
 
 import { faWind, faLeaf } from '@fortawesome/free-solid-svg-icons';
 
+
 const dataItems = [
   {
     icon: faLightbulb,
