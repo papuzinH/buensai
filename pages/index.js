@@ -8,9 +8,7 @@ import ItemBenefits from '../components/ItemBenefits/ItemBenefits';
 import Hero from '../components/Hero/Hero';
 import { useEffect, useState, useContext } from 'react';
 import CardFeature from '../components/CardFeature/CardFeature';
-
 import { faLightbulb, faSmile } from '@fortawesome/free-regular-svg-icons';
-
 import { faWind, faLeaf } from '@fortawesome/free-solid-svg-icons';
 import { CartContext } from '../contexts/CartContext';
 import { getFirestore } from '../utils/firebase';
@@ -92,7 +90,6 @@ export default function Home() {
       </Head>
       <Navbar page={dataPage} />
       <Hero />
-      <div className={styles['cardsFeatureContainer']}>{showCardsFeature()}</div>
       <Features dataItems={dataItems} />
       <Footer />
       {cart.map((item, index) => (
