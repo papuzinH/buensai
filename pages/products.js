@@ -53,7 +53,16 @@ const Products = () => {
       </Head>
       <Navbar page={dataPage} />
       <HeroProducts />
-      <div style={{ display: 'flex', justifyContent: 'flex-end', background: '#F9F4EF' }}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'flex-end',
+          background: '#F9F4EF',
+          width: '80%',
+          flexWrap: 'wrap',
+          margin: '1em',
+        }}
+      >
         {!loading &&
           dataProducts.map((product) => {
             return (
