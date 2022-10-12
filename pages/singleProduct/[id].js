@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import { getFirestore } from '../../utils/firebase';
+import Image from 'next/image';
 import Head from 'next/head';
 import Counter from '../components/Counter/Counter';
 import Navbar from '../components/Navbar/Navbar';
@@ -6,6 +9,11 @@ import Footer from '../components/Footer/Footer';
 
 const SingleProduct = () => {
   const dataPage = { page: 'products' };
+  const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
+  const { id } = router.query;
+
   return (
     <>
       <Head>

@@ -1,4 +1,7 @@
-import React from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { CartContext } from '../contexts/CartContext';
+import { getFirestore } from '../utils/firebase';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Navbar from '../components/Navbar/Navbar';
 import HeroProducts from '../components/HeroProducts/HeroProducts';
@@ -10,26 +13,51 @@ import Footer from '../components/Footer/Footer';
 
 const Products = () => {
   const dataPage = { page: 'products' };
-  const dataProducts = [
-    {
-      imagen: OlmoChino,
-      nombre: 'Olmo Chino',
-      precio: '$4500',
-      id: '1',
-    },
-    {
-      imagen: Shito,
-      nombre: 'Shito',
-      precio: '$5000',
-      id: '2',
-    },
-    {
-      imagen: Shohin,
-      nombre: 'Shohin',
-      precio: '$3800',
-      id: '3',
-    },
-  ];
+  // const dataProducts = [
+  //   {
+  //     imagen: OlmoChino,
+  //     nombre: 'Olmo Chino',
+  //     precio: '$4500',
+  //     id: '1',
+  //   },
+  //   {
+  //     imagen: Shito,
+  //     nombre: 'Shito',
+  //     precio: '$5000',
+  //     id: '2',
+  //   },
+  //   {
+  //     imagen: Shohin,
+  //     nombre: 'Shohin',
+  //     precio: '$3800',
+  //     id: '3',
+  //   },
+  // ];
+  const { cart, setCart } = useContext(CartContext);
+  const [dataProducts, setDataProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const goToProduct = (id) => router.push(`/singleProduct/${id}`);
+  const router = useRouter();
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const db = getFirestore();
+        const itemsCollection = db.collection(`productos`);
+        const itemSnapshot = await itemsCollection.get();
+
+        const items = itemSnapshot.docs.map((doc) => {
+          return { id: doc.id, ...doc.data() };
+        });
+        setDataProducts(items);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getProducts();
+  }, []);
 
   return (
     <>
@@ -43,17 +71,20 @@ const Products = () => {
       <Navbar page={dataPage} />
       <HeroProducts />
       <div style={{ display: 'flex', justifyContent: 'flex-end', background: '#F9F4EF' }}>
-        {dataProducts.map((product) => {
-          return (
-            <ProductCard
-              imagen={product.imagen}
-              nombre={product.nombre}
-              precio={product.precio}
-              key={product.id}
-            />
-          );
-        })}
+        {!loading &&
+          dataProducts.map((product) => {
+            return (
+              <ProductCard
+                imagen={product.urlImage}
+                nombre={product.nombre}
+                precio={product.precio}
+                key={product.id}
+                onClick={() => goToProduct(product.id)}
+              />
+            );
+          })}
       </div>
+      <Footer />
     </>
   );
 };
