@@ -6,12 +6,13 @@ import Features from '../components/Features/Features';
 import Footer from '../components/Footer/Footer';
 import ItemBenefits from '../components/ItemBenefits/ItemBenefits';
 import Hero from '../components/Hero/Hero';
+import { useEffect, useState, useContext } from 'react';
 import CardFeature from '../components/CardFeature/CardFeature';
-import { useState } from 'react';
-
 import { faLightbulb, faSmile } from '@fortawesome/free-regular-svg-icons';
-
 import { faWind, faLeaf } from '@fortawesome/free-solid-svg-icons';
+import { CartContext } from '../contexts/CartContext';
+import { getFirestore } from '../utils/firebase';
+import { doc } from 'prettier';
 
 const dataItems = [
   {
@@ -41,9 +42,40 @@ const dataItems = [
 ];
 
 export default function Home() {
+  const { cart, setCart } = useContext(CartContext);
+  const [cardsFeature, setCardsFeature] = useState(['Destacados', 'Nuevos Bonsais', 'Descuentos']);
+
   const showCardsFeature = () => {
     return cardsFeature.map((card, index) => <CardFeature key={index} text={card} />);
   };
+
+  // useEffect(() => {
+  //   setCart([
+  //     { id: 1, name: 'Robert' },
+  //     { id: 2, name: 'Mike' },
+  //   ]);
+  // }, [setCart]);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const db = getFirestore();
+        const itemsCollection = db.collection(`accesorios`);
+        console.log(itemsCollection);
+        const itemSnapshot = await itemsCollection.get();
+
+        const items = itemSnapshot.docs.map((doc) => {
+          return { id: doc.id, ...doc.data() };
+        });
+
+        console.log(items);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getProducts();
+  }, []);
 
   const dataPage = { page: 'index' };
 
@@ -58,9 +90,11 @@ export default function Home() {
       </Head>
       <Navbar page={dataPage} />
       <Hero />
-
       <Features dataItems={dataItems} />
       <Footer />
+      {cart.map((item, index) => (
+        <div key={index}>{item.name}</div>
+      ))}
     </>
   );
 }
