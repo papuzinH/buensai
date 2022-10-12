@@ -3,16 +3,37 @@ import { useRouter } from 'next/router';
 import { getFirestore } from '../../utils/firebase';
 import Image from 'next/image';
 import Head from 'next/head';
-import Counter from '../components/Counter/Counter';
-import Navbar from '../components/Navbar/Navbar';
-import Footer from '../components/Footer/Footer';
+import Counter from '../../components/Counter/Counter';
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 const SingleProduct = () => {
   const dataPage = { page: 'products' };
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
+  //const [cart, setProduct] = useState(...cart);
   const router = useRouter();
   const { id } = router.query;
+
+  useEffect(() => {
+    setLoading(true);
+    const getProduct = async () => {
+      const db = getFirestore();
+      const itemsCollection = db.collection(`productos`);
+      const itemSnapshot = await itemsCollection.doc(id).get();
+
+      if (!itemSnapshot.exists) {
+        console.log('No matching documents.');
+        return;
+      }
+
+      console.log('PRODUCTO', itemSnapshot.id);
+
+      setProduct({ id: itemSnapshot.id, ...itemSnapshot.data() });
+      setLoading(false);
+    };
+    getProduct();
+  }, [id]);
 
   return (
     <>
@@ -24,7 +45,19 @@ const SingleProduct = () => {
         <link rel="stylesheet" href="https://use.typekit.net/jfy4rte.css"></link>
       </Head>
       <Navbar page={dataPage} />
-      <Counter />
+      {!loading && (
+        <div>
+          <Image src={product.urlImage} width={200} height={200} alt={'eu'} />
+          <Counter />
+          <button
+            onClick={(product) => {
+              setCart(product);
+            }}
+          >
+            Agregar al carrito
+          </button>
+        </div>
+      )}
       <Footer />
     </>
   );

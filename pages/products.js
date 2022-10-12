@@ -13,31 +13,15 @@ import Footer from '../components/Footer/Footer';
 
 const Products = () => {
   const dataPage = { page: 'products' };
-  // const dataProducts = [
-  //   {
-  //     imagen: OlmoChino,
-  //     nombre: 'Olmo Chino',
-  //     precio: '$4500',
-  //     id: '1',
-  //   },
-  //   {
-  //     imagen: Shito,
-  //     nombre: 'Shito',
-  //     precio: '$5000',
-  //     id: '2',
-  //   },
-  //   {
-  //     imagen: Shohin,
-  //     nombre: 'Shohin',
-  //     precio: '$3800',
-  //     id: '3',
-  //   },
-  // ];
   const { cart, setCart } = useContext(CartContext);
   const [dataProducts, setDataProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const goToProduct = (id) => router.push(`/singleProduct/${id}`);
   const router = useRouter();
+
+  const goToProduct = (id) => {
+    console.log(id);
+    router.push(`/singleProduct/${id}`);
+  };
 
   useEffect(() => {
     const getProducts = async () => {
@@ -79,7 +63,7 @@ const Products = () => {
                 nombre={product.nombre}
                 precio={product.precio}
                 key={product.id}
-                onClick={() => goToProduct(product.id)}
+                goToProduct={goToProduct(product.id)}
               />
             );
           })}

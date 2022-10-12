@@ -6,7 +6,7 @@ import Features from '../components/Features/Features';
 import Footer from '../components/Footer/Footer';
 import ItemBenefits from '../components/ItemBenefits/ItemBenefits';
 import Hero from '../components/Hero/Hero';
-import { useEffect, useState, useContext } from 'react';
+import { useState } from 'react';
 import CardFeature from '../components/CardFeature/CardFeature';
 import { faLightbulb, faSmile } from '@fortawesome/free-regular-svg-icons';
 import { faWind, faLeaf } from '@fortawesome/free-solid-svg-icons';
