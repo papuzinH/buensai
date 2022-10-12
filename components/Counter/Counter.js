@@ -1,14 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './counter.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 const Counter = () => {
+  const [count, setCount] = useState(1);
+
+  const minus = (count) => {
+    count = count - 1;
+    console.log(count);
+  };
+
+  const plus = (count) => {
+    count = count + 1;
+    console.log(count);
+  };
   return (
     <div className={`${styles['counter']}`}>
-      <FontAwesomeIcon icon={faMinus} className={`${styles['plusminus']}`} />
-      <p>1</p>
-      <FontAwesomeIcon icon={faPlus} className={`${styles['plusminus']}`} />
+      <FontAwesomeIcon
+        icon={faMinus}
+        className={`${styles['plusminus']}`}
+        onClick={() => {
+          if (count < 99 && count > 0) {
+            setCount(count - 1);
+          }
+        }}
+      />
+      <p>{count}</p>
+      <FontAwesomeIcon
+        icon={faPlus}
+        className={`${styles['plusminus']}`}
+        onClick={() => {
+          if (count >= 0 && count < 99) {
+            setCount(count + 1);
+          }
+        }}
+      />
     </div>
   );
 };

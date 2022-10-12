@@ -64,9 +64,6 @@ export default function Home() {
       <Hero />
       <Features dataItems={dataItems} />
       <Footer />
-      {cart.map((item, index) => (
-        <div key={index}>{item.name}</div>
-      ))}
     </>
   );
 }
