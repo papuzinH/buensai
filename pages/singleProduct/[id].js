@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useRouter } from 'next/router';
 import { getFirestore } from '../../utils/firebase';
 import Image from 'next/image';
@@ -6,14 +6,20 @@ import Head from 'next/head';
 import Counter from '../../components/Counter/Counter';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import { CartContext } from '../../contexts/CartContext';
 
 const SingleProduct = () => {
   const dataPage = { page: 'products' };
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
-  //const [cart, setProduct] = useState(...cart);
   const router = useRouter();
   const { id } = router.query;
+  const { cart, setCart } = useContext(CartContext);
+
+  const addProduct = (product) => {
+    console.log(product);
+    setCart([...cart, product]);
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -50,14 +56,19 @@ const SingleProduct = () => {
           <Image src={product.urlImage} width={200} height={200} alt={'eu'} />
           <Counter />
           <button
-            onClick={(product) => {
-              setCart(product);
+            onClick={() => {
+              addProduct(product);
             }}
           >
             Agregar al carrito
           </button>
         </div>
       )}
+      <ul>
+        {cart.map((product) => {
+          return <li key={product.id}>{product.nombre}</li>;
+        })}
+      </ul>
       <Footer />
     </>
   );

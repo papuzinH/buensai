@@ -1,5 +1,4 @@
 import { useEffect, useState, useContext } from 'react';
-import { CartContext } from '../contexts/CartContext';
 import { getFirestore } from '../utils/firebase';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -13,7 +12,7 @@ import Footer from '../components/Footer/Footer';
 
 const Products = () => {
   const dataPage = { page: 'products' };
-  const { cart, setCart } = useContext(CartContext);
+  //const { cart, setCart } = useContext(CartContext);
   const [dataProducts, setDataProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
@@ -63,7 +62,7 @@ const Products = () => {
                 nombre={product.nombre}
                 precio={product.precio}
                 key={product.id}
-                goToProduct={goToProduct(product.id)}
+                goToProduct={() => goToProduct(product.id)}
               />
             );
           })}
