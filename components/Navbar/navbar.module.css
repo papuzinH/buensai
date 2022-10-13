@@ -63,11 +63,12 @@
 .itemsNav,
 .itemsNavDark {
   color: #f6ffe0;
-  padding: 10px 0;
   margin: 0 15px;
-  font-size: 14px;
+  font-size: 14px !important;
   text-transform: uppercase;
   font: normal normal 300 14px/18px Europa;
+  background-color: transparent;
+  border: none;
 }
 
 .itemsNavDark {
