@@ -83,6 +83,7 @@ const Products = () => {
         handleLoadMore={handleLoadMore}
         cantToShow={cantToShow}
         dataProducts={dataProducts}
+        loading={loading}
       />
       <Footer />
     </>
