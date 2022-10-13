@@ -7,6 +7,7 @@ import Counter from '../../components/Counter/Counter';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import { CartContext } from '../../contexts/CartContext';
+import ProductItemContainer from '../../components/ProductItemContainer/ProductItemContainer';
 
 const SingleProduct = () => {
   const dataPage = { page: 'products' };
@@ -14,12 +15,8 @@ const SingleProduct = () => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const { id } = router.query;
-  const { cart, setCart } = useContext(CartContext);
+  const cart= useContext(CartContext);
 
-  const addProduct = (product) => {
-    console.log(product);
-    setCart([...cart, product]);
-  };
 
   useEffect(() => {
     setLoading(true);
@@ -52,7 +49,8 @@ const SingleProduct = () => {
       </Head>
       <Navbar page={dataPage} />
       {!loading && (
-        <div>
+        <ProductItemContainer image={product.urlImage} addToCart={cart.addToCart} product={product} />
+        /*<div>
           <Image src={product.urlImage} width={200} height={200} alt={'eu'} />
           <Counter />
           <button
@@ -62,14 +60,10 @@ const SingleProduct = () => {
           >
             Agregar al carrito
           </button>
-        </div>
+        </div>*/
       )}
-      <ul>
-        {cart.map((product) => {
-          return <li key={product.id}>{product.nombre}</li>;
-        })}
-      </ul>
       <Footer />
+      {console.log(cart)}
     </>
   );
 };

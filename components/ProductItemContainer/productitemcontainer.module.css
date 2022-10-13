@@ -1,0 +1,2 @@
+.prod_item_container {height: calc(100vh - 120px);}
+.slider_container {display: flex; align-items: center;}
