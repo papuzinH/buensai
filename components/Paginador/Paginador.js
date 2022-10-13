@@ -3,8 +3,19 @@ import styles from './paginador.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-const Paginador = () => {
+const Paginador = ({ handleLoadMore, cantToShow, dataProducts }) => {
   return (
+    <div className={`inner ${styles['contenedor']}`}>
+      {cantToShow < dataProducts.length ? (
+        <button onClick={handleLoadMore} className={`${styles['btn']}`}>
+          Ver mas
+        </button>
+      ) : (
+        <h2 className={`${styles['noMore']}`}>No hay mas productos</h2>
+      )}
+    </div>
+  );
+  /*return (
     <section className={`${styles['paginador']}`}>
       <ul>
         <li>
@@ -20,7 +31,7 @@ const Paginador = () => {
         </li>
       </ul>
     </section>
-  );
+  );*/
 };
 
 export default Paginador;

@@ -6,6 +6,7 @@
     font-weight: bold;
     
 }
+/*
 .paginador ul{
     display: flex;
     list-style-type: none;
@@ -28,4 +29,32 @@
 .paginador ul li a{
     width: 10px;
     font-size: 20px;
+}
+*/
+/*ver mas*/
+.btn {
+    background-color: #95ab63;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #95ab63;
+    cursor: pointer;
+    font-family: 'europa';
+    font-weight: lighter;
+    font-size: 18px;
+    color: #f6ffe0;
+}
+
+.btn:hover {
+    border: 1px solid black;
+    color:black;
+    background: none;
+    transition: 0.2s;
+}
+.noMore{
+    margin: 0 auto;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em ;
 }

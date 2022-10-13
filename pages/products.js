@@ -4,12 +4,9 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Navbar from '../components/Navbar/Navbar';
 import HeroProducts from '../components/HeroProducts/HeroProducts';
-import OlmoChino from '../public/assets/olmoChino.png';
-import Shito from '../public/assets/shito.png';
-import Shohin from '../public/assets/shohin.png';
 import ProductCard from '../components/ProductCard/ProductCard';
 import Footer from '../components/Footer/Footer';
-import Paginador from '../components/Paginador/Paginador'
+import Paginador from '../components/Paginador/Paginador';
 
 const Products = () => {
   const dataPage = { page: 'products' };
@@ -17,6 +14,7 @@ const Products = () => {
   const [dataProducts, setDataProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
+  const [cantToShow, setCantToShow] = useState(6);
 
   const goToProduct = (id) => {
     console.log(id);
@@ -43,6 +41,10 @@ const Products = () => {
     getProducts();
   }, []);
 
+  const handleLoadMore = () => {
+    setCantToShow(cantToShow + 3);
+  };
+
   return (
     <>
       <Head>
@@ -57,16 +59,16 @@ const Products = () => {
       <div
         style={{
           display: 'flex',
-          justifyContent: 'flex-end',
+          justifyContent: 'space-around',
           background: '#F9F4EF',
-          width: '80%',
           flexWrap: 'wrap',
-          margin: '1em',
+          margin: '0 auto',
         }}
+        className="inner"
       >
         {!loading &&
-          dataProducts.map((product) => {
-            return (
+          dataProducts.map((product, index) => {
+            return index < cantToShow ? (
               <ProductCard
                 imagen={product.urlImage}
                 nombre={product.nombre}
@@ -74,11 +76,15 @@ const Products = () => {
                 key={product.id}
                 goToProduct={() => goToProduct(product.id)}
               />
-            );
+            ) : null;
           })}
       </div>
-      <Paginador/>
-      <Footer/>
+      <Paginador
+        handleLoadMore={handleLoadMore}
+        cantToShow={cantToShow}
+        dataProducts={dataProducts}
+      />
+      <Footer />
     </>
   );
 };

@@ -5,10 +5,14 @@ import styles from './productCard.module.css';
 const ProductCard = ({ imagen, nombre, precio, goToProduct }) => {
   return (
     <div className={styles['productCard']}>
-      <Image src={imagen} alt={nombre} width={'228px'} height={'228px'}></Image>
+      <div className={styles['productCardImg']}>
+        <Image src={imagen} alt={nombre} width={'228px'} height={'228px'}></Image>
+      </div>
       <p>{nombre}</p>
       <p className={styles['precio']}>{`$ ${precio}`}</p>
-      <button onClick={goToProduct}>ver mas</button>
+      <button onClick={goToProduct} className={styles['btn']}>
+        Ver producto
+      </button>
     </div>
   );
 };
