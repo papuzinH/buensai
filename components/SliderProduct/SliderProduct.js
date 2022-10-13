@@ -6,7 +6,7 @@ import grid from '../../styles/grid.module.css';
 
 function SliderProduct() {
   return (
-    <Carousel className={grid.col_6}>
+    <Carousel>
       <Carousel.Item>
         <img
           className="d-block w-100"
