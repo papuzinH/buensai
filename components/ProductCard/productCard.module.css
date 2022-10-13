@@ -1,22 +1,52 @@
 
-.productCard{
+.productCardImg{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'europa';
-    font-weight: lighter;
-    font-size: 20px;
-    color: #10222B;
-    margin-right: 20px;
     width: 300px;
     height: 300px;
     background-color: #fff;
 }
-.precio{
+.productCard .precio{
     font-weight: bold;
     color: #95AB63;
 }
 .productCard p{
     padding-top: .5em;
+    color: #10222B;
+    font-family: 'europa';
+    font-weight: lighter;
+    font-size: 20px;
+    text-align: center;
 }
+.productCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.productCard button{
+    margin: .5em 0em;
+
+}
+.btn {
+    background-color: #95ab63;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #95ab63;
+    cursor: pointer;
+    font-family: 'europa';
+    font-weight: lighter;
+    font-size: 18px;
+    color: #f6ffe0;
+  }
+  
+  .btn:hover {
+    border: 1px solid black;
+    color:black;
+    background: none;
+    transition: 0.2s;
+  }
+  
