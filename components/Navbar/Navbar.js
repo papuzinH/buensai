@@ -5,7 +5,6 @@ import { faSearch, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = ({ page }) => {
-  console.log(page.page);
   return (
     <header className={page.page === 'products' ? styles.navProducts : styles.nav}>
       <nav className={styles.menu}>

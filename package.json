@@ -17,6 +17,7 @@
     "bootstrap": "^5.2.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "firebase": "8.7.1",
     "lint-staged": "^13.0.3",
     "next": "12.3.0",
     "pre-commit": "^1.2.2",
