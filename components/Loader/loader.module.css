@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
+    margin-top: 2em;
 }
 .loader span{
     font-size: 20px;
@@ -15,7 +16,7 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: black;
     animation: bounce .5s alternate infinite;
 }
 .ball:nth-child(2){
