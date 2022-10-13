@@ -1,11 +1,11 @@
 .loader{
     width: 120px;
-    height: 75px;
+    height: 300px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
-    margin-top: 2em;
+
 }
 .loader span{
     font-size: 20px;
