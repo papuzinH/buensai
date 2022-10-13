@@ -34,7 +34,7 @@ const Navbar = ({ page }) => {
           <li>
             <button
               onClick={() => {
-                router.push('/prodcuts');
+                router.push('/products');
               }}
               className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
             >
