@@ -3,31 +3,53 @@ import styles from './navbar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { useRouter } from 'next/router';
 
 const Navbar = ({ page }) => {
+  const router = useRouter();
   return (
     <header className={page.page === 'products' ? styles.navProducts : styles.nav}>
       <nav className={styles.menu}>
         <ul className={styles.menuItems}>
           <li>
-            <a className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}>
+            <button
+              onClick={() => {
+                router.push('/');
+              }}
+              className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
+            >
               Inicio
-            </a>
+            </button>
           </li>
           <li>
-            <a className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}>
+            <button
+              onClick={() => {
+                router.push('/aboutus');
+              }}
+              className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
+            >
               Nosotros
-            </a>
+            </button>
           </li>
           <li>
-            <a className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}>
+            <button
+              onClick={() => {
+                router.push('/prodcuts');
+              }}
+              className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
+            >
               Productos
-            </a>
+            </button>
           </li>
           <li>
-            <a className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}>
+            <button
+              onClick={() => {
+                router.push('/contact');
+              }}
+              className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
+            >
               Contacto
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
@@ -51,9 +73,15 @@ const Navbar = ({ page }) => {
           </a>
         </li>
         <li>
-          <a className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}>
+          <button
+            onClick={() => {
+              router.push('/cart');
+            }}
+            a
+            className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
+          >
             <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: 15, color: 'white' }} />
-          </a>
+          </button>
         </li>
       </ul>
     </header>
