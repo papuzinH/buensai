@@ -1,0 +1,25 @@
+.counter{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Europa';
+    font-weight: lighter;
+}
+
+.plusminus{
+    color: #BDD684;
+    font-size: 0px;
+    font-weight: bolder;
+    border: 2px solid #BDD684;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+    margin: 1em;
+    width:30px;
+}
+
+.plusminus:hover{
+    background-color: #BDD684;
+    color: white;
+    cursor: pointer;
+}

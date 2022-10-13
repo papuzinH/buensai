@@ -8,7 +8,7 @@ import grid from '../../styles/grid.module.css';
 
 const Features = ({ dataItems }) => (
   <>
-    <div id='features' className={`${styles['features_section']}`}>
+    <div id="features" className={`${styles['features_section']}`}>
       <CardFeatureContainer />
       <div className="inner">
         <div className={`${grid['grid']}`}>

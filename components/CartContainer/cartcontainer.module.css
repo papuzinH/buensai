@@ -1,0 +1,38 @@
+.title,
+.total {
+  font-family: 'Circe';
+  font-size: 30px;
+}
+
+.total {
+  text-align: end;
+}
+
+.total span {
+  color: #95ab63;
+}
+
+.btn {
+  background-color: #95ab63;
+  padding: 20px 12.5px;
+  border-radius: 15px;
+  border: 2px solid #95ab63;
+  cursor: pointer;
+  font-family: 'europa';
+  font-weight: lighter;
+  font-size: 25px;
+  color: #f6ffe0;
+}
+
+.btn:hover {
+  border: 2px solid black;
+  color:black;
+  background: none;
+  transition: 0.2s;
+}
+
+.cont_btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1em;
+}
