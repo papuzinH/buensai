@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './paginador.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import Loader from '../../components/Loader/Loader';
 
 const Paginador = ({ handleLoadMore, cantToShow, dataProducts, loading }) => {
   return (
@@ -15,7 +16,7 @@ const Paginador = ({ handleLoadMore, cantToShow, dataProducts, loading }) => {
           <h2 className={`${styles['noMore']}`}>No hay mas productos</h2>
         )
       ) : (
-        <h2 className={`${styles['noMore']}`}>Cargando...</h2>
+        <Loader />
       )}
     </div>
   );
