@@ -4,8 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 const Counter = (props) => {
-  const [count, setCount] = useState(1);
-
+  const [count, setCount] = useState(  props.quantity ? props.quantity : 1  );
   const minus = (count) => {
     count = count - 1;
     console.log(count);
@@ -17,7 +16,7 @@ const Counter = (props) => {
   };
   return (
     <>
-      <button onClick={() => props.addToCart(props.product, count)}>Añadir al carrito</button>
+      {!props.fromCart &&  <button onClick={() => props.addToCart(props.product, count)}>Añadir al carrito</button>}
       <div className={`${styles['counter']}`}>
         <FontAwesomeIcon
           icon={faMinus}

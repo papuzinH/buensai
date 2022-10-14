@@ -16,7 +16,12 @@ const CartProvider = ({ children }) => {
     }
   };
 
-  return <CartContext.Provider value={{ cart, setCart, addToCart }}>{children}</CartContext.Provider>;
+  const removeOfCart = (id) => {
+    let cartFiltered = cart.filter((one_product) => one_product.product.id !== id);
+    setCart(cartFiltered);
+  };
+
+  return <CartContext.Provider value={{ cart, setCart, addToCart, removeOfCart }}>{children}</CartContext.Provider>;
 };
 
 export { CartContext, CartProvider };

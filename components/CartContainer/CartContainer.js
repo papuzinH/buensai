@@ -4,41 +4,27 @@ import CartItem from '../CartItem/CartItem';
 import OlmoChino from '../../public/assets/olmoChino.png';
 import Shito from '../../public/assets/shito.png';
 import Shohin from '../../public/assets/shohin.png';
+import { CartContext } from '../../contexts/CartContext';
+import { useContext } from 'react';
 
 const CartContainer = () => {
-  const dataCart = [
-    {
-      imagen: OlmoChino,
-      nombre: 'Olmo Chino',
-      precio: 4500,
-      id: '1',
-    },
-    {
-      imagen: Shito,
-      nombre: 'Shito',
-      precio: 5000,
-      id: '2',
-    },
-    {
-      imagen: Shohin,
-      nombre: 'Shohin',
-      precio: 3800,
-      id: '3',
-    },
-  ];
+  const cart = useContext(CartContext);
+
   let total = 0;
   return (
     <div className={`inner`}>
       <h2 className={`${styles['title']}`}>Carrito</h2>
-      {dataCart.map((item) => {
-        total = total + item.precio;
+      {cart.cart.map((item) => {
+        console.log(item);
+        total = total + (item.product.precio * item.quantity);
         return (
           <CartItem
-            key={item.id}
-            indice={item.id}
-            image={item.imagen}
-            name={item.nombre}
-            price={item.precio}
+            key={item.product.id}
+            indice={item.product.id}
+            image={item.product.urlImage}
+            name={item.product.nombre}
+            price={item.product.precio}
+            quantity={item.quantity}
           />
         );
       })}
