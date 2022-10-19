@@ -9,7 +9,6 @@ import Counter from '../Counter/Counter';
 const ProductDescriptionContainer = (props) => {
   return (
     <div className={`${grid.col_6} ${styles.prod_desc_container}`}>
-      {console.log(props)}
       <Breadcrumb product={props.product} />
       <div className={styles.header_prod}>
         <h1>{props.product.nombre}</h1>
