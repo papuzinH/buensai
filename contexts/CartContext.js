@@ -21,7 +21,18 @@ const CartProvider = ({ children }) => {
     setCart(cartFiltered);
   };
 
-  return <CartContext.Provider value={{ cart, setCart, addToCart, removeOfCart }}>{children}</CartContext.Provider>;
+
+  const changeQuantity = (id, quantity) => {
+    let productInCart = cart.find(
+      (one_product) => one_product.product.id === id
+    );
+    productInCart.quantity = quantity;
+    console.log(cart)
+  };
+
+
+
+  return <CartContext.Provider value={{ cart, setCart, addToCart, removeOfCart, changeQuantity }}>{children}</CartContext.Provider>;
 };
 
 export { CartContext, CartProvider };

@@ -30,7 +30,6 @@ const SingleProduct = () => {
         return;
       }
 
-      console.log('PRODUCTO', itemSnapshot.id);
 
       setProduct({ id: itemSnapshot.id, ...itemSnapshot.data() });
       setLoading(false);
@@ -63,7 +62,6 @@ const SingleProduct = () => {
         </div>*/
       )}
       <Footer />
-      {console.log(cart)}
     </>
   );
 };

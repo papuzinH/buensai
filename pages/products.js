@@ -17,7 +17,6 @@ const Products = () => {
   const [cantToShow, setCantToShow] = useState(6);
 
   const goToProduct = (id) => {
-    console.log(id);
     router.push(`/singleProduct/${id}`);
   };
 

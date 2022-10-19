@@ -1,19 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './counter.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
+import { CartContext } from '../../contexts/CartContext';
+import { useContext } from 'react';
 
 const Counter = (props) => {
   const [count, setCount] = useState(  props.quantity ? props.quantity : 1  );
+  const cart = useContext(CartContext);
+
   const minus = (count) => {
     count = count - 1;
-    console.log(count);
   };
 
   const plus = (count) => {
     count = count + 1;
-    console.log(count);
   };
+
+  useEffect(() => {
+    if (props.fromCart) {
+      cart.changeQuantity(props.id, count);
+    }
+  }, [count]);
+  
   return (
     <>
       {!props.fromCart &&  <button onClick={() => props.addToCart(props.product, count)}>Añadir al carrito</button>}

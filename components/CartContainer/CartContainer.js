@@ -15,7 +15,6 @@ const CartContainer = () => {
     <div className={`inner`}>
       <h2 className={`${styles['title']}`}>Carrito</h2>
       {cart.cart.map((item) => {
-        console.log(item);
         total = total + (item.product.precio * item.quantity);
         return (
           <CartItem

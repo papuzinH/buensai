@@ -13,7 +13,7 @@ const CartItem = ({ image, name, price, indice, quantity }) => {
     <div key={indice} className={`${styles['cont_cart']} inner`}>
       <Image src={image} alt={name} width="176px" height="176px"></Image>
       <p className={`${styles['name']}`}>{name}</p>
-      <Counter fromCart={true} quantity={quantity} />
+      <Counter id={indice} fromCart={true} quantity={quantity} />
       <p className={`${styles['price']}`}>${price}</p>
       <FontAwesomeIcon
         onClick={() => {
