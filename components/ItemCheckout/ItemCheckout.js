@@ -8,13 +8,13 @@ const ItemCheckout = ({ image, name, price, indice, quantity }) => {
   const cart = useContext(CartContext);
   console.log('hola', cart);
   return (
-    <div className={`${styles['title']}`}>
+    <div className={`${styles['container']}`}>
       <Image src={image} alt={name} width="100px" height="100px"></Image>
-      <div>
+      <div className={`${styles['containerText']}`}>
         <h2>{name}</h2>
         <p>Cantidad: {quantity}</p>
       </div>
-      <h2>{price}</h2>
+      <h2 className={`${styles['price']}`}>${price}</h2>
     </div>
   );
 };

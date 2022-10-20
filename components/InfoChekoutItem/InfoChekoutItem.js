@@ -7,12 +7,10 @@ import ItemCheckout from '../ItemCheckout/ItemCheckout';
 
 const InfoChekoutItem = () => {
   const cart = useContext(CartContext);
-  const total = 0;
   return (
     <div className={styles['container']}>
       <h2>Productos</h2>
       {cart.cart.map((item) => {
-        total = total + item.product.precio * item.quantity;
         return (
           <ItemCheckout
             key={item.product.id}
@@ -24,9 +22,9 @@ const InfoChekoutItem = () => {
           />
         );
       })}
-      <div>
+      <div className={styles['containerTotal']}>
         <p>Total con envío</p>
-        <p>{total}</p>
+        <p className={styles['total']}>${cart.cartTotalPrice()}</p>
       </div>
       <button className={styles['btn']}>Comprar</button>
     </div>
