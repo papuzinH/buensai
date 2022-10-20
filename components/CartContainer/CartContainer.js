@@ -7,6 +7,7 @@ import Shohin from '../../public/assets/shohin.png';
 import { CartContext } from '../../contexts/CartContext';
 import { useContext } from 'react';
 
+
 const CartContainer = () => {
   const cart = useContext(CartContext);
 
@@ -33,6 +34,7 @@ const CartContainer = () => {
       <div className={`${styles['cont_btn']}`}>
         <a className={`${styles['btn']}`}>Continuar compra</a>
       </div>
+      
     </div>
   );
 };
