@@ -3,7 +3,7 @@ import styles from './infoCheckout.module.css';
 function date() {}
 const InfoCheckout = () => {
   return (
-    <div className={`${styles['container']} inner`}>
+    <div className={`${styles['container']}`}>
       <form>
         <div>
           <input type="text" placeholder="Nombre" required />
