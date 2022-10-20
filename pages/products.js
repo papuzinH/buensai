@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState } from 'react';
 import { getFirestore } from '../utils/firebase';
 import { useRouter } from 'next/router';
 import Head from 'next/head';

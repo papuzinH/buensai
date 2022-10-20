@@ -2,9 +2,27 @@ import styles from './cartcontainer.module.css';
 import CartItem from '../CartItem/CartItem';
 import { CartContext } from '../../contexts/CartContext';
 import { useContext } from 'react';
+import { useRouter } from 'next/router';
 
 const CartContainer = () => {
   const cart = useContext(CartContext);
+  const router = useRouter();
+
+  if (cart.cart.length === 0) {
+    return (
+      <div className={styles['center']}>
+        <h1 className={styles['emptyCart']}>Carrito vacio, ve a comprar o moriré!</h1>
+        <button
+          className={styles['btn']}
+          onClick={() => {
+            router.push('/products');
+          }}
+        >
+          Ver productos
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className={`inner`}>

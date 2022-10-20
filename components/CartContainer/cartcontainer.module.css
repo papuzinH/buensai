@@ -36,3 +36,13 @@
   justify-content: flex-end;
   margin-bottom: 1em;
 }
+
+.emptyCart{
+  font-family: 'circe';
+  font-weight: lighter;
+}
+
+.center{
+  text-align: center;
+  padding: 2em;
+}
