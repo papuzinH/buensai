@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from './paginador.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Loader from '../../components/Loader/Loader';
 
 const Paginador = ({ handleLoadMore, cantToShow, dataProducts, loading }) => {

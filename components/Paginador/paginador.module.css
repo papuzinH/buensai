@@ -33,25 +33,25 @@
 */
 /*ver mas*/
 .btn {
-    background-color: #95ab63;
+    background-color: transparent;
     padding: 10px 20px;
-    border-radius: 50px;
-    border: 1px solid #95ab63;
+    border: 0px;
     cursor: pointer;
     font-family: 'europa';
     font-weight: lighter;
     font-size: 18px;
-    color: #f6ffe0;
+    color: #95ab63;
 }
 
 .btn:hover {
-    border: 1px solid black;
     color:black;
-    background: none;
     transition: 0.2s;
 }
+
 .noMore{
     margin: 0 auto;
+    font-family: 'europa';
+    font-weight: bold;
 }
 .contenedor{
     display: flex;

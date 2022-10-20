@@ -57,33 +57,38 @@ const Products = () => {
       <HeroProducts />
       <div
         style={{
-          display: 'flex',
-          justifyContent: 'space-around',
           background: '#F9F4EF',
-          flexWrap: 'wrap',
-          margin: '0 auto',
         }}
-        className="inner"
       >
-        {!loading &&
-          dataProducts.map((product, index) => {
-            return index < cantToShow ? (
-              <ProductCard
-                imagen={product.urlImage}
-                nombre={product.nombre}
-                precio={product.precio}
-                key={product.id}
-                goToProduct={() => goToProduct(product.id)}
-              />
-            ) : null;
-          })}
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-around',
+            flexWrap: 'wrap',
+            margin: '0 auto',
+          }}
+          className="inner"
+        >
+          {!loading &&
+            dataProducts.map((product, index) => {
+              return index < cantToShow ? (
+                <ProductCard
+                  imagen={product.urlImage}
+                  nombre={product.nombre}
+                  precio={product.precio}
+                  key={product.id}
+                  goToProduct={() => goToProduct(product.id)}
+                />
+              ) : null;
+            })}
+        </div>
+        <Paginador
+          handleLoadMore={handleLoadMore}
+          cantToShow={cantToShow}
+          dataProducts={dataProducts}
+          loading={loading}
+        />
       </div>
-      <Paginador
-        handleLoadMore={handleLoadMore}
-        cantToShow={cantToShow}
-        dataProducts={dataProducts}
-        loading={loading}
-      />
       <Footer />
     </>
   );
