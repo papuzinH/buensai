@@ -44,9 +44,15 @@ const CartContainer = () => {
         Total con envío <span>${cart.cartTotalPrice()}</span>
       </h2>
       <div className={`${styles['cont_btn']}`}>
-        <a className={`${styles['btn']}`}>Continuar compra</a>
+        <a
+          className={`${styles['btn']}`}
+          onClick={() => {
+            router.push('/checkout');
+          }}
+        >
+          Continuar compra
+        </a>
       </div>
-      
     </div>
   );
 };

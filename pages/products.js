@@ -65,7 +65,7 @@ const Products = () => {
             display: 'flex',
             justifyContent: 'space-around',
             flexWrap: 'wrap',
-            margin: '0 auto',
+            margin: '50px auto',
           }}
           className="inner"
         >

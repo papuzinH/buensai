@@ -8,11 +8,13 @@ const ProductCard = ({ imagen, nombre, precio, goToProduct }) => {
       <div className={styles['productCardImg']}>
         <Image src={imagen} alt={nombre} width={'228px'} height={'228px'}></Image>
       </div>
-      <p>{nombre}</p>
-      <p className={styles['precio']}>{`$ ${precio}`}</p>
-      <button onClick={goToProduct} className={styles['btn']}>
-        Ver producto
-      </button>
+      <div className={styles['productCardInfo']}>
+        <p>{nombre}</p>
+        <p className={styles['precio']}>{`$ ${precio}`}</p>
+        <button onClick={goToProduct} className={styles['btn']}>
+          Ver producto
+        </button>
+      </div>
     </div>
   );
 };

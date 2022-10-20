@@ -1,8 +1,6 @@
 .container form{
     display: flex;
-    justify-content: left;
     flex-direction: column;
-    width: 60%;
     margin-bottom: 140px;
     margin-top: 65px;
 }
