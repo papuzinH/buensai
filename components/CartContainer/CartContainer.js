@@ -1,21 +1,22 @@
-import React from 'react';
 import styles from './cartcontainer.module.css';
 import CartItem from '../CartItem/CartItem';
 import OlmoChino from '../../public/assets/olmoChino.png';
 import Shito from '../../public/assets/shito.png';
 import Shohin from '../../public/assets/shohin.png';
 import { CartContext } from '../../contexts/CartContext';
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 
 const CartContainer = () => {
   const cart = useContext(CartContext);
 
-  let total = 0;
+  useEffect(() => {
+    console.log('holu me renderee');
+  }, [cart]);
+
   return (
     <div className={`inner`}>
       <h2 className={`${styles['title']}`}>Carrito</h2>
       {cart.cart.map((item) => {
-        total = total + (item.product.precio * item.quantity);
         return (
           <CartItem
             key={item.product.id}
@@ -28,7 +29,7 @@ const CartContainer = () => {
         );
       })}
       <h2 className={`${styles['total']}`}>
-        Total con envío <span>${total}</span>
+        Total con envío <span>${cart.cartTotalPrice()}</span>
       </h2>
       <div className={`${styles['cont_btn']}`}>
         <a className={`${styles['btn']}`}>Continuar compra</a>
