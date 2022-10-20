@@ -1,17 +1,10 @@
 import styles from './cartcontainer.module.css';
 import CartItem from '../CartItem/CartItem';
-import OlmoChino from '../../public/assets/olmoChino.png';
-import Shito from '../../public/assets/shito.png';
-import Shohin from '../../public/assets/shohin.png';
 import { CartContext } from '../../contexts/CartContext';
-import { useContext, useState, useEffect } from 'react';
+import { useContext } from 'react';
 
 const CartContainer = () => {
   const cart = useContext(CartContext);
-
-  useEffect(() => {
-    console.log('holu me renderee');
-  }, [cart]);
 
   return (
     <div className={`inner`}>
