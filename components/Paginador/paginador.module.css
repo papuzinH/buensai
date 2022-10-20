@@ -1,0 +1,60 @@
+.paginador{
+    width: 170px;
+    height: 50px;
+    margin: 5% auto;
+    font-family: 'europa';
+    font-weight: bold;
+    
+}
+/*
+.paginador ul{
+    display: flex;
+    list-style-type: none;
+}
+.paginador ul li:first-child{
+    background-color: #95AB63;
+    color: #F9F4EF;
+}
+.paginador ul li {
+    width: 50px;
+    height: 50px;
+    margin-right: 14px;
+    border: 1px solid #95AB63;
+    color: #95AB63;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.paginador ul li a{
+    width: 10px;
+    font-size: 20px;
+}
+*/
+/*ver mas*/
+.btn {
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 0px;
+    cursor: pointer;
+    font-family: 'europa';
+    font-weight: lighter;
+    font-size: 18px;
+    color: #95ab63;
+}
+
+.btn:hover {
+    color:black;
+    transition: 0.2s;
+}
+
+.noMore{
+    margin: 0 auto;
+    font-family: 'europa';
+    font-weight: bold;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em ;
+}

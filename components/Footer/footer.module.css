@@ -1,0 +1,37 @@
+.title,
+.subtitle {
+  font-family: europa, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 25px;
+  margin: 0.9em;
+}
+
+.subtitle {
+  font-size: 14px;
+}
+
+.footer_container {
+  background-color: #10222b;
+
+  text-align: center;
+  padding: 60px 0px;
+}
+
+.color {
+  color: #f6ffe0;
+}
+
+.space-icons {
+  margin-right: 1em;
+}
+
+.facebook {
+  width: 20.24px;
+  height: 20.12px;
+}
+
+.instagram {
+  width: 20.24px;
+  height: 20.24px;
+}

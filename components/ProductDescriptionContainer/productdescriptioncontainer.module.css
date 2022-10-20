@@ -1,0 +1,6 @@
+.prod_desc_container{display:flex;justify-content:center;flex-direction:column}
+.header_prod{display:flex;justify-content:space-between}
+.header_prod p{font-size:2em;font-weight:600;color:#95ab63}
+.prod_desc_container>p{font-size:20px}
+.categories_container{display:flex;width:100%;justify-content:flex-start}
+.btn_counter_container{display:flex;justify-content:flex-start;align-items:center;width:100%}

@@ -1,0 +1,35 @@
+.container form{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    width: 60%;
+    margin-bottom: 140px;
+    margin-top: 65px;
+}
+.container form input, .container form select{
+    font-size: 20px;
+    font-family: 'circe';
+    margin-bottom: 90px;
+    border-right: 0em;
+    border-left: 0em;
+    border-top: 0em;
+    border-color: #8AB16E;
+    
+}
+.container form input:last-child{
+    margin-bottom: 0px
+}
+
+.container form select{
+    border-bottom:2px solid #8AB16E;
+}
+
+.container form div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px;
+}
+.container form div input{
+    margin: 0px;
+    width: 45%;
+}
