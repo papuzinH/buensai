@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from './heroProducts.module.css';
-import Image from 'next/image';
-import hero from '../../public/assets/HeroProducts.png';
 
 const HeroProducts = () => {
   return (
