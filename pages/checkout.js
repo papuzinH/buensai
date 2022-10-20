@@ -5,6 +5,7 @@ import Footer from '../components/Footer/Footer';
 import InfoCheckout from '../components/InfoCheckout/InfoCheckout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import InfoChekoutItem from '../components/InfoChekoutItem/InfoChekoutItem';
 
 const checkout = () => {
   const dataPage = { page: 'products' };
@@ -18,7 +19,14 @@ const checkout = () => {
         <link rel="stylesheet" href="https://use.typekit.net/jfy4rte.css"></link>
       </Head>
       <NavBar page={dataPage} />
-      <InfoCheckout />
+      <div className={`inner`} style={{
+          display: 'flex',
+          justifyContent: 'space-around'
+        }}>
+        <InfoCheckout />
+        <InfoChekoutItem/>
+      </div>
+      
       <Footer />
     </>
   );

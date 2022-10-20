@@ -1,0 +1,26 @@
+.container{
+  background-color: white;
+  width: 30%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.btn {
+    background-color: #95ab63;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #95ab63;
+    cursor: pointer;
+    font-family: 'europa';
+    font-weight: lighter;
+    font-size: 18px;
+    color: #f6ffe0;
+  }
+  
+  .btn:hover {
+    border: 1px solid black;
+    color:black;
+    background: none;
+    transition: 0.2s;
+  }
