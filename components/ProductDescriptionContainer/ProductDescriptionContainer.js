@@ -21,8 +21,6 @@ const ProductDescriptionContainer = (props) => {
       </p>
       <div className={styles.categories_container}>
         <CategorySingleProduct />
-        <CategorySingleProduct />
-        <CategorySingleProduct />
       </div>
       <div className={styles.btn_counter_container}>
         <Counter addToCart={props.addToCart} product={props.product} />
