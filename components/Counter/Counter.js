@@ -14,7 +14,6 @@ const Counter = (props) => {
   const added = useRef(false);
   const router = useRouter();
 
-
   const notify = () =>
     toast('Se agregó al carrito', {
       position: 'bottom-right',
@@ -31,7 +30,6 @@ const Counter = (props) => {
       cart.changeQuantity(props.id, count);
     }
   }, [count]);
-console.log(added);
   return (
     <>
       <ToastContainer />
