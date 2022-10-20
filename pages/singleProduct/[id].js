@@ -15,8 +15,7 @@ const SingleProduct = () => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const { id } = router.query;
-  const cart= useContext(CartContext);
-
+  const cart = useContext(CartContext);
 
   useEffect(() => {
     setLoading(true);
@@ -29,7 +28,6 @@ const SingleProduct = () => {
         console.log('No matching documents.');
         return;
       }
-
 
       setProduct({ id: itemSnapshot.id, ...itemSnapshot.data() });
       setLoading(false);
@@ -48,7 +46,11 @@ const SingleProduct = () => {
       </Head>
       <Navbar page={dataPage} />
       {!loading && (
-        <ProductItemContainer image={product.urlImage} addToCart={cart.addToCart} product={product} />
+        <ProductItemContainer
+          image={product.urlImage}
+          addToCart={cart.addToCart}
+          product={product}
+        />
         /*<div>
           <Image src={product.urlImage} width={200} height={200} alt={'eu'} />
           <Counter />
