@@ -4,5 +4,3 @@
 .prod_desc_container>p{font-size:20px}
 .categories_container{display:flex;width:100%;justify-content:flex-start}
 .btn_counter_container{display:flex;justify-content:flex-start;align-items:center;width:100%}
-.btn_counter_container button{color:#f6ffe3;background-color:#95ab63;border:2px solid #95ab63;font-size:25px;padding:17px 57px;border-radius:15px;transition:.2s; margin-right: 10px;}
-.btn_counter_container button:hover{background-color:#f6ffe3;color:#95ab63;cursor:pointer}

@@ -4,6 +4,7 @@ import { CartContext } from '../../contexts/CartContext';
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
 
+
 const CartContainer = () => {
   const cart = useContext(CartContext);
   const router = useRouter();
@@ -45,6 +46,7 @@ const CartContainer = () => {
       <div className={`${styles['cont_btn']}`}>
         <a className={`${styles['btn']}`}>Continuar compra</a>
       </div>
+      
     </div>
   );
 };
