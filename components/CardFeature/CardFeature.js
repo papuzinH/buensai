@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './cardFeature.module.css';
 
 const CardFeature = (props) => {
@@ -6,7 +7,9 @@ const CardFeature = (props) => {
     <div className={styles['card']}>
       <div className={styles['textAndButton']}>
         <p>{props.text}</p>
-        <a href='#'>Ver mas &gt;</a>
+        <Link href="/products">
+          <a>Ver mas &gt;</a>
+        </Link>
       </div>
     </div>
   );

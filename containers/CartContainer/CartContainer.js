@@ -1,5 +1,5 @@
 import styles from './cartcontainer.module.css';
-import CartItem from '../CartItem/CartItem';
+import CartItem from '../../components/CartItem/CartItem';
 import { CartContext } from '../../contexts/CartContext';
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
@@ -26,7 +26,7 @@ const CartContainer = () => {
   }
 
   return (
-    <div className={`inner`}>
+    <div className={`inner ${styles.cart_container}`}>
       <h2 className={`${styles['title']}`}>Carrito</h2>
       {cart.cart.map((item) => {
         return (

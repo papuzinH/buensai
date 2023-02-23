@@ -1,12 +1,17 @@
 import React from 'react';
 import styles from './categorysingleproduct.module.css';
-import icon from '../../public/assets/feliz.svg';
 
-const CategorySingleProduct = () => {
-  return (
+const CategorySingleProduct = ({categorias}) => {
+
+  return ( 
     <div className={styles.container_category}>
-      <img src={icon.src} alt="Second slide" />
-      <p>Exterior</p>
+      {categorias.map((categoria, index) => {
+        return (
+          <p key={index}>
+            {categoria}
+          </p>
+        );
+      })}
     </div>
   );
 };

@@ -37,3 +37,13 @@
   font-size: 16px;
   color: #95ab63;
 }
+
+@media screen and (max-width: 768px) {
+  .itemBenefit_text {
+    margin-left: 10px;
+  }
+  .itemBenefit_icon{
+    display: none;
+  }
+  
+}

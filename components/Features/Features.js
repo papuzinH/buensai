@@ -3,7 +3,7 @@ import styles from './features.module.css';
 import ItemBenefits from '../ItemBenefits/ItemBenefits';
 import Image from 'next/image';
 import bonsai from '../../public/assets/bonsaifeature.png';
-import CardFeatureContainer from '../CardFeatureContainer/CardFeatureContainer';
+import CardFeatureContainer from '../../containers/CardFeatureContainer/CardFeatureContainer';
 import grid from '../../styles/grid.module.css';
 import { useRouter } from 'next/router';
 
@@ -22,10 +22,11 @@ const Features = ({ dataItems }) => {
                 </h2>
 
                 <p className={`${styles['descrip']}`}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et quam et
-                  sapien rutrum mattis at sit amet purus. Fusce sed odio magna. Vestibulum ante
-                  ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec ut
-                  arcu neque.
+                  En Buensai te ofrecemos la posibilidad de llevar a tu hogar u oficina un pedacito
+                  de naturaleza con numerosos beneficios para tu bienestar. Con una gran variedad de
+                  especies y estilos, en Buensai encontrarás el bonsái perfecto para ti. Descubre
+                  nuestra amplia selección y llévate a casa un compañero de vida que te aportará
+                  satisfacción y tranquilidad.
                 </p>
 
                 {dataItems.map((item) => {

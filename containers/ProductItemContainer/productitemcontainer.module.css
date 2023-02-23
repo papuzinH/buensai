@@ -1,0 +1,7 @@
+.prod_item_container {min-height: calc(100vh - 120px); padding: 50px 0}
+.slider_container {display: flex; align-items: center;}
+
+@media screen and (max-width: 768px) {
+  .prod_item_container {height: fit-content; padding-bottom: 80px;}
+}
+    

@@ -36,11 +36,11 @@
 
 .logo a,
 .logoProducts a {
-  color: #f6ffe0;
+  color: #f6ffe0 !important;
   font: normal normal 300 40px/51px Europa;
 }
 
-.logoProducts a {
+.navProducts .logo a {
   color: #10222b !important;
 }
 
@@ -49,19 +49,20 @@
   justify-content: flex-end;
 }
 
+
+
 .menuItems,
 .social {
   display: flex;
   list-style: none;
+  margin-bottom: 0;
 }
 
-.social .itemsNav svg,
-.itemsNavDark svg {
+.social .itemsNav svg{
   height: 15px;
 }
 
-.itemsNav,
-.itemsNavDark {
+.itemsNav{
   color: #f6ffe0;
   margin: 0 15px;
   font-size: 14px !important;
@@ -71,11 +72,11 @@
   border: none;
 }
 
-.itemsNavDark {
-  color: #10222b;
+.navProducts .itemsNav{
+  color: #10222b !important;
 }
 
-.itemsNavDark svg {
+.navProducts .itemsNav svg {
   color: #10222b !important;
 }
 
@@ -86,7 +87,7 @@
   margin-right: 0;
 }
 
-.itemsNav:hover, .itemsNavDark:hover {
+.itemsNav:hover{
   cursor: pointer;
   transition: 1s;
 }
@@ -94,6 +95,99 @@
   border-bottom: 1px solid #f6ffe0;
 }
 
-.itemsNavDark:hover {
-  border-bottom: 1px solid #10222b;
+.menuMobile{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #eee;
+  width: 100vw;  
+  height: 100vh;
+  top: 0;
+  right: -100vw;
+  z-index: 100;
+  transition: 0.5s;
+}
+
+.menuMobile ul {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuMobile .itemsNav {
+  margin: 0;
+  font-size: 20px !important;
+  color: #10222b;
+  font: normal normal 300 40px/51px Europa;
+  padding: 10px 0;
+}
+
+.menuMobile .social {
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.menuMobile .social .itemsNav {
+  margin: 0 15px;
+}
+
+.menuMobile .social .itemsNav svg {
+  height: 20px;
+}
+
+.menuMobile .closeMenu {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  font-size: 20px;
+  color: #10222b;
+  cursor: pointer;
+}
+
+.showMenu {
+  right: 0;
+  transition: 0.5s
+}
+
+.nav .burguerMenu>svg {
+  color: #fff !important;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .nav, .navProducts {
+    padding: 20px 5%;
+  }
+
+  .social, .menu {
+    display: none;
+  }
+
+  .menuMobile .social{
+    display: flex;
+  }
+
+  .menuMobile .social svg {
+    color: #000 !important;
+  }
+
+  .logo {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .logo a {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .nav, .navProducts {
+    padding: 10px 5%;
+  }
 }

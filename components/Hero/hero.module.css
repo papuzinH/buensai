@@ -101,3 +101,31 @@
   background: none;
   transition: 0.2s;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .cta {
+    height: 100vh;
+    padding: 20px;
+  }
+
+  .cta h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .cta p {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 20px 0 40px 0;
+  }
+
+  .cta .btn {
+    font-size: 20px;
+    padding: 15px 50px;
+  }
+}
+

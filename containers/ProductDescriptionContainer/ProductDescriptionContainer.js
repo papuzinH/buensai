@@ -2,9 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './productdescriptioncontainer.module.css';
 import grid from '../../styles/grid.module.css';
-import Breadcrumb from '../Breadcrumb/Breadcrumb';
-import CategorySingleProduct from '../CategorySingleProduct/CategorySingleProduct';
-import Counter from '../Counter/Counter';
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
+import CategorySingleProduct from '../../components/CategorySingleProduct/CategorySingleProduct';
+import Counter from '../../components/Counter/Counter';
 
 const ProductDescriptionContainer = (props) => {
   return (
@@ -15,12 +15,10 @@ const ProductDescriptionContainer = (props) => {
         <p>${props.product.precio}</p>
       </div>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et quam et sapien
-        rutrum mattis at sit amet purus. Fusce sed odio magna. Vestibulum ante ipsum primis in
-        faucibus orci luctus et ultrices posuere cubilia curae; Donec ut arcu neque.
+        {props.product.descripcion}
       </p>
       <div className={styles.categories_container}>
-        <CategorySingleProduct />
+        <CategorySingleProduct categorias={props.product.categorias} />
       </div>
       <div className={styles.btn_counter_container}>
         <Counter addToCart={props.addToCart} product={props.product} />

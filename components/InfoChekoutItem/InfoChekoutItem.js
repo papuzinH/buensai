@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import 'react-responsive-modal/styles.css';
 import Modal from 'react-responsive-modal';
 
-const InfoChekoutItem = () => {
+const InfoChekoutItem = (props) => {
   const cart = useContext(CartContext);
   const router = useRouter();
   const [open, setOpen] = useState(false);

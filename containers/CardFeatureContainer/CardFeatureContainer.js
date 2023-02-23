@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import CardFeature from '../CardFeature/CardFeature';
+import CardFeature from '../../components/CardFeature/CardFeature';
 import styles from './cardFeatureContainer.module.css';
 import grid from '../../styles/grid.module.css';
 
