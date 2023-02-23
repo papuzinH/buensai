@@ -4,3 +4,9 @@
 .counter p{font-size:1.5em;margin:0 1em; width: 15px;}
 .counter_btn{color:#f6ffe3;background-color:#95ab63;border:2px solid #95ab63;font-size:25px;padding:17px 57px;border-radius:15px;transition:.2s; margin-right: 10px;}
 .counter_btn:hover{background-color:#f6ffe3;color:#95ab63;cursor:pointer}
+
+@media screen and (max-width: 768px) {
+  .counter_btn {
+    margin-top: 25px;
+  }
+}

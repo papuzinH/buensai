@@ -11,7 +11,7 @@ const CartItem = ({ image, name, price, indice, quantity }) => {
   const cart = useContext(CartContext);
 
   return (
-    <div key={indice} className={`${styles['cont_cart']} inner`}>
+    <div key={indice} className={`${styles['cont_cart']}`}>
       <Image src={image} alt={name} width="176px" height="176px"></Image>
       <p className={`${styles['name']}`}>{name}</p>
       {/* <Counter id={indice} fromCart={true} quantity={quantity} /> */}

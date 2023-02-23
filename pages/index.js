@@ -51,16 +51,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Buensai</title>
-        <meta
-          name="description"
-          content="Buensai team Cami Dejtiar, Maxiiliano Coletti, Lautaro Hudson, German Figueroa"
-        />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://use.typekit.net/wxl3mdd.css"></link>
-        <link rel="stylesheet" href="https://use.typekit.net/jfy4rte.css"></link>
-      </Head>
       <Navbar page={dataPage} />
       <Hero />
       <Features dataItems={dataItems} />

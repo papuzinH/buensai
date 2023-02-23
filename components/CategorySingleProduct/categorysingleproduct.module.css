@@ -1,2 +1,4 @@
 .container_category {display: flex; align-items: center; margin-right: 20px; margin-bottom: 60px;}
-.container_category p {margin-bottom: 0; margin-left: 5px;}
+.container_category p {margin-bottom: 0; font-weight: 500; color: #95ab63; text-transform: capitalize; font-size: 16px !important; padding: 0 10px; border-right: 1px solid #000;}
+.container_category p:last-child {border-right: none; padding-right: 0;}
+.container_category p:first-child {padding-left: 0;}
