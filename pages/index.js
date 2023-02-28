@@ -12,7 +12,6 @@ import { faLightbulb, faSmile } from '@fortawesome/free-regular-svg-icons';
 import { faWind, faLeaf } from '@fortawesome/free-solid-svg-icons';
 //import { doc } from 'prettier';
 
-
 const dataItems = [
   {
     icon: faLightbulb,

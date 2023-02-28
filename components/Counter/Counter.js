@@ -29,7 +29,7 @@ const Counter = (props) => {
     if (props.fromCart) {
       cart.changeQuantity(props.id, count);
     }
-  }, [count]);
+  }, [count, props.fromCart, props.id]);
   return (
     <>
       <ToastContainer />
