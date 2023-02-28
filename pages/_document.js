@@ -23,11 +23,10 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-        
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://use.typekit.net/wxl3mdd.css"></link>
-        <link rel="stylesheet" href="https://use.typekit.net/jfy4rte.css"></link>
-      </Head>
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="stylesheet" href="https://use.typekit.net/wxl3mdd.css"></link>
+          <link rel="stylesheet" href="https://use.typekit.net/jfy4rte.css"></link>
+        </Head>
         <body>
           <Main />
           <NextScript />

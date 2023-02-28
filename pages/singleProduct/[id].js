@@ -35,7 +35,6 @@ const SingleProduct = () => {
     getProduct();
   }, [id]);
 
-
   return (
     <>
       <Navbar page={dataPage} />

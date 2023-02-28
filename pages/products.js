@@ -46,20 +46,18 @@ const Products = () => {
     setSelectedCategory(category.target.value);
   }
 
-
   const categories = dataProducts
-  .map((product) => product.categorias)
-  .reduce((accumulator, currentArray) => accumulator.concat(currentArray), [])
-  .filter((category, index, array) => array.indexOf(category) === index);
+    .map((product) => product.categorias)
+    .reduce((accumulator, currentArray) => accumulator.concat(currentArray), [])
+    .filter((category, index, array) => array.indexOf(category) === index);
 
-  
   return (
     <>
       <Navbar page={dataPage} />
       <HeroProducts />
       <div style={{ background: '#F9F4EF' }}>
         <div className="inner">
-        <CategoryFilter categories={categories} handleFilterChange={handleCategoryChange} />
+          <CategoryFilter categories={categories} handleFilterChange={handleCategoryChange} />
           <div
             style={{
               display: 'flex',
@@ -71,7 +69,8 @@ const Products = () => {
             {!loading &&
               dataProducts
                 .filter(
-                  (product) => selectedCategory === 'all' || product.categorias.includes(selectedCategory),
+                  (product) =>
+                    selectedCategory === 'all' || product.categorias.includes(selectedCategory),
                 )
                 .slice(0, cantToShow)
                 .map((product) => (
@@ -84,14 +83,14 @@ const Products = () => {
                   />
                 ))}
           </div>
-          {
-            dataProducts.length >= cantToShow &&
-          <Paginador
-            handleLoadMore={() => setCantToShow(cantToShow + 3)}
-            cantToShow={cantToShow}
-            dataProducts={dataProducts}
-            loading={loading}
-          />}
+          {dataProducts.length >= cantToShow && (
+            <Paginador
+              handleLoadMore={() => setCantToShow(cantToShow + 3)}
+              cantToShow={cantToShow}
+              dataProducts={dataProducts}
+              loading={loading}
+            />
+          )}
         </div>
       </div>
       <Footer />

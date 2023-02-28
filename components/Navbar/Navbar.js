@@ -116,7 +116,7 @@ const Navbar = ({ page }) => {
           <FontAwesomeIcon icon={faBars} style={{ fontSize: 25, color: 'black' }} />
         </button>
       )}
-      <MenuMobile openMenu={openMenu} handleOpenMenu={handleOpenMenu} router={router}/>
+      <MenuMobile openMenu={openMenu} handleOpenMenu={handleOpenMenu} router={router} />
     </header>
   );
 };
@@ -124,9 +124,7 @@ const Navbar = ({ page }) => {
 const MenuMobile = ({ openMenu, handleOpenMenu, router }) => {
   return (
     <div className={`${styles.menuMobile} ${openMenu ? styles.showMenu : ''}`}>
-      <button className={`${styles.itemsNav} ${styles.closeMenu}`}
-        onClick={handleOpenMenu}
-      >
+      <button className={`${styles.itemsNav} ${styles.closeMenu}`} onClick={handleOpenMenu}>
         <FontAwesomeIcon icon={faClose} style={{ fontSize: 25, color: 'black' }} />
       </button>
       <ul className={styles.menuItems}>

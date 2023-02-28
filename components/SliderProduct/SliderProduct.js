@@ -7,13 +7,11 @@ import grid from '../../styles/grid.module.css';
 function SliderProduct(props) {
   return (
     <Carousel>
-      {
-        props.images.map((image, index) => (
-          <Carousel.Item key={index}>
-            <img className="d-block w-100" src={image} alt="slide" />
-          </Carousel.Item>
-        ))
-      }
+      {props.images.map((image, index) => (
+        <Carousel.Item key={index}>
+          <img className="d-block w-100" src={image} alt="slide" />
+        </Carousel.Item>
+      ))}
     </Carousel>
   );
 }

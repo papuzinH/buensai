@@ -9,9 +9,9 @@ const About = () => {
       <Head>
         <title>Nosotros - Buensai</title>
       </Head>
-      <Navbar page={{page: 'aboutus'}} />
+      <Navbar page={{ page: 'aboutus' }} />
       <AboutUsContainer />
-        <Footer />
+      <Footer />
     </>
   );
 };
