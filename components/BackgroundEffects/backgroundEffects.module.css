@@ -1,0 +1,149 @@
+.effectsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.gradientOrb1,
+.gradientOrb2,
+.gradientOrb3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.3;
+  animation: float 20s ease-in-out infinite;
+}
+
+.gradientOrb1 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--zen-sage) 0%, transparent 70%);
+  top: 10%;
+  left: -10%;
+  animation-delay: 0s;
+}
+
+.gradientOrb2 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--bamboo-green) 0%, transparent 70%);
+  top: 60%;
+  right: -5%;
+  animation-delay: -7s;
+}
+
+.gradientOrb3 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, var(--tea-green) 0%, transparent 70%);
+  bottom: 20%;
+  left: 60%;
+  animation-delay: -14s;
+}
+
+.meshGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(107, 127, 90, 0.05) 0%,
+    rgba(139, 163, 115, 0.03) 25%,
+    rgba(194, 212, 179, 0.06) 50%,
+    rgba(163, 196, 157, 0.04) 75%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  opacity: 0.6;
+  animation: meshMove 30s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -40px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(40px, 30px) scale(1.05);
+  }
+}
+
+@keyframes meshMove {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Variantes */
+.hero {
+  z-index: 1;
+}
+
+.hero .gradientOrb1 {
+  background: radial-gradient(circle, var(--zen-sage) 0%, transparent 60%);
+  opacity: 0.2;
+  filter: blur(60px);
+}
+
+.hero .gradientOrb2 {
+  background: radial-gradient(circle, var(--jade-green) 0%, transparent 60%);
+  opacity: 0.25;
+  filter: blur(50px);
+}
+
+.features .gradientOrb1,
+.features .gradientOrb2,
+.features .gradientOrb3 {
+  filter: blur(30px);
+  opacity: 0.15;
+}
+
+.footer {
+  z-index: 1;
+}
+
+.footer .gradientOrb1,
+.footer .gradientOrb2,
+.footer .gradientOrb3 {
+  filter: blur(35px);
+  opacity: 0.1;
+}
+
+@media (max-width: 768px) {
+  .gradientOrb1,
+  .gradientOrb2,
+  .gradientOrb3 {
+    width: 150px;
+    height: 150px;
+    filter: blur(25px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradientOrb1,
+  .gradientOrb2,
+  .gradientOrb3,
+  .meshGradient {
+    animation: none;
+  }
+}

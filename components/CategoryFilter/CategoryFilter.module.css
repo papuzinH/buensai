@@ -2,36 +2,55 @@
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
-    padding-top: 50px;
-    padding-bottom: 10px;
+    padding-top: 60px;
+    padding-bottom: 15px;
 }
 
 .categoryFilterTitle {
-    margin-right: 15px;
+    margin-right: 20px;
     margin-bottom: 0;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: var(--charcoal-gray);
 }
 
 .categoryFilterSelect {
-    padding: 5px;
-    border: none;
-    font-size: 16px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 2px solid var(--zen-sage);
+    border-radius: 25px;
+    font-size: 1rem;
+    font-family: var(--font-body);
     text-transform: capitalize;
-    border-bottom: 1px solid #95AB63;
     cursor: pointer;
+    color: var(--zen-sage);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(107, 127, 90, 0.1);
+}
+
+.categoryFilterSelect:hover {
+    background: var(--zen-sage);
+    color: var(--mist-white);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(107, 127, 90, 0.2);
 }
 
 .categoryFilterSelect option {
     text-transform: capitalize;
-    color: #95AB63;
+    color: var(--charcoal-gray);
+    background: var(--cream-white);
+    padding: 8px;
 }
 
 .categoryFilterSelect option:hover {
     cursor: pointer;
+    background: var(--tea-green);
 }
 
 .categoryFilterSelect option:active {
-    background-color: #95AB63;
-    color: #fff;
+    background-color: var(--zen-sage);
+    color: var(--mist-white);
 }
 
 @media screen and (max-width: 768px) {

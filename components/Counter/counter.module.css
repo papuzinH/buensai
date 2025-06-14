@@ -1,9 +1,72 @@
-.counter{display:flex;justify-content:center;align-items:center;font-family:Europa;font-weight:lighter}
-.plusminus{color:#bdd684;font-size:0;font-weight:bolder;border:5px solid #bdd684;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;margin:1em;width:50px;height:50px}
-.plusminus:hover{background-color:#bdd684;color:#fff;cursor:pointer}
-.counter p{font-size:1.5em;margin:0 1em; width: 15px;}
-.counter_btn{color:#f6ffe3;background-color:#95ab63;border:2px solid #95ab63;font-size:25px;padding:17px 57px;border-radius:15px;transition:.2s; margin-right: 10px;}
-.counter_btn:hover{background-color:#f6ffe3;color:#95ab63;cursor:pointer}
+.counter{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.plusminus{
+  color: var(--zen-sage);
+  font-size:0;
+  font-weight:bold;
+  border: 3px solid var(--zen-sage);
+  border-radius:50%;
+  margin:1em;
+  width:55px;
+  height:55px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.plusminus:hover{
+  background: var(--zen-sage);
+  color: var(--mist-white);
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(107, 127, 90, 0.3);
+}
+
+.counter p{
+  font-size:1.6em;
+  margin:0 1.5em; 
+  width: 20px;
+  text-align: center;
+  color: var(--charcoal-gray);
+  font-weight: 500;
+}
+
+.counter_btn{
+  color: var(--mist-white);
+  background: var(--nature-gradient-primary);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.4rem;
+  padding: 18px 60px;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 15px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 
+    0 8px 25px rgba(107, 127, 90, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.counter_btn:hover{
+  background: linear-gradient(135deg, var(--bamboo-green) 0%, var(--jade-green) 50%, var(--tea-green) 100%);
+  color: var(--mist-white);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 12px 35px rgba(107, 127, 90, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
 
 @media screen and (max-width: 768px) {
   .counter_btn {

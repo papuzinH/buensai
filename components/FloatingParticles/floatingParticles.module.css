@@ -1,0 +1,113 @@
+.particleContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, var(--zen-sage) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: float 20s infinite linear;
+}
+
+.particle1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 25s;
+}
+
+.particle2 {
+  top: 20%;
+  left: 80%;
+  animation-delay: -5s;
+  animation-duration: 30s;
+}
+
+.particle3 {
+  top: 60%;
+  left: 15%;
+  animation-delay: -10s;
+  animation-duration: 35s;
+}
+
+.particle4 {
+  top: 80%;
+  left: 70%;
+  animation-delay: -15s;
+  animation-duration: 28s;
+}
+
+.particle5 {
+  top: 40%;
+  left: 50%;
+  animation-delay: -20s;
+  animation-duration: 32s;
+}
+
+.particle6 {
+  top: 30%;
+  left: 90%;
+  animation-delay: -8s;
+  animation-duration: 26s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-100px) translateX(50px) scale(1.2);
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-200px) translateX(100px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Variaciones para diferentes partículas */
+.particle1,
+.particle4 {
+  background: radial-gradient(circle, var(--bamboo-green) 0%, transparent 70%);
+}
+
+.particle2,
+.particle5 {
+  background: radial-gradient(circle, var(--tea-green) 0%, transparent 70%);
+}
+
+.particle3,
+.particle6 {
+  background: radial-gradient(circle, var(--soft-jade) 0%, transparent 70%);
+}
+
+@media (max-width: 768px) {
+  .particle {
+    width: 3px;
+    height: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .particle {
+    animation: none;
+    opacity: 0.1;
+  }
+}

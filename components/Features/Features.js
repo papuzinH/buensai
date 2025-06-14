@@ -4,14 +4,17 @@ import ItemBenefits from '../ItemBenefits/ItemBenefits';
 import Image from 'next/image';
 import bonsai from '../../public/assets/bonsaifeature.png';
 import CardFeatureContainer from '../../containers/CardFeatureContainer/CardFeatureContainer';
+import BackgroundEffects from '../BackgroundEffects/BackgroundEffects';
 import grid from '../../styles/grid.module.css';
 import { useRouter } from 'next/router';
 
 const Features = ({ dataItems }) => {
   const router = useRouter();
+  
   return (
     <>
       <div id="features" className={`${styles['features_section']}`}>
+        <BackgroundEffects variant="features" />
         <CardFeatureContainer />
         <div className="inner">
           <div className={`${grid['grid']}`}>

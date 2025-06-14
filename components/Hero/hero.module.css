@@ -1,105 +1,174 @@
-/* reset button */
-.cta .btn {
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  overflow: visible;
-
-  background: transparent;
-
-  /* inherit font & color from ancestor */
-  color: inherit;
-  font: inherit;
-
-  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-  line-height: normal;
-
-  /* Corrects font smoothing for webkit */
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-
-  /* Corrects inability to style clickable `input` types in iOS */
-  -webkit-appearance: none;
-}
-
-/* Remove excess padding and border in Firefox 4+ */
-.cta .btn::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-/* fin reset button */
-
-/* reset h2 */
-.cta h2 {
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-/* fin reset h2 */
-
 .hero {
-  background-image: url('../../public/assets/hero.png');
-  box-shadow: inset 0px 10px 560px 20px black;
-  width: 100%;
-  height: calc(100vh + 145px);
+  background: linear-gradient(
+    135deg, 
+    rgba(107, 127, 90, 0.7) 0%, 
+    rgba(139, 163, 115, 0.5) 30%,
+    rgba(127, 160, 113, 0.6) 70%,
+    rgba(194, 212, 179, 0.4) 100%
+  ), url('../../public/assets/hero.png');
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="heroPattern" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23FAFBF8" opacity="0.05"/><circle cx="10" cy="40" r="0.5" fill="%23C2D4B3" opacity="0.08"/></pattern></defs><rect width="100" height="100" fill="url(%23heroPattern)"/></svg>');
+  animation: float 30s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(20px, -20px) rotate(1deg); }
+  66% { transform: translate(-15px, 15px) rotate(-1deg); }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(47, 62, 48, 0.2) 0%,
+    rgba(107, 127, 90, 0.15) 50%,
+    rgba(194, 212, 179, 0.05) 100%
+  );
+  backdrop-filter: blur(1px);
 }
 
 .cta {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  z-index: 10;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  z-index: 0;
-  height: 100vh;
-  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 16px 40px 0 rgba(47, 62, 48, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  padding: 80px 100px;
+  max-width: 800px;
+  margin: 0 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay {
-  width: 100%;
-  height: 100%;
+.cta::before {
+  content: '';
   position: absolute;
-  background: transparent linear-gradient(180deg, #000000b5 0%, #2a2a2a57 56%, #54545400 100%) 0% 0%
-    no-repeat padding-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(194, 212, 179, 0.08) 50%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border-radius: 32px;
+  pointer-events: none;
 }
 
-.cta h2,
-.cta p,
-.cta .btn {
-  color: #f6ffe0;
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 20px 50px 0 rgba(47, 62, 48, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .cta h2 {
-  font: normal normal 300 60px Europa;
-  line-height: 66px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 1.1;
+  color: var(--mist-white);
+  margin-bottom: 25px;
+  text-shadow: 
+    2px 2px 4px rgba(47, 62, 48, 0.4),
+    0 0 20px rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
 }
 
 .cta p {
-  font-size: 40px;
-  line-height: 45px;
-  font-weight: 200;
-  margin: 30px 0;
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.4;
+  color: rgba(250, 251, 248, 0.9);
+  margin: 35px 0 50px 0;
+  text-shadow: 1px 1px 2px rgba(47, 62, 48, 0.5);
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.5px;
 }
 
-.cta .btn {
-  color: #f6ffe3;
-  background-color: #95ab63;
-  border: 2px solid #95ab63;
-  font-size: 25px;
-  padding: 17px 57px;
-  border-radius: 15px;
-  transition: 0.2s;
-}
-
-.cta .btn:hover {
+.btn {
+  display: inline-block;
+  background: var(--nature-gradient-primary);
+  color: var(--mist-white);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 20px 45px;
+  border-radius: 50px;
+  text-decoration: none;
   cursor: pointer;
-  border-color: #f6ffe0;
-  background: none;
-  transition: 0.2s;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 8px 25px rgba(107, 127, 90, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  backdrop-filter: blur(8px);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 12px 35px rgba(107, 127, 90, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, var(--bamboo-green) 0%, var(--jade-green) 50%, var(--tea-green) 100%);
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(122, 139, 90, 0.4);
 }
 
 @media (max-width: 768px) {
@@ -108,24 +177,43 @@
   }
 
   .cta {
-    height: 100vh;
-    padding: 20px;
+    padding: 40px 30px;
+    margin: 0 15px;
   }
 
   .cta h2 {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 2.2rem;
+    line-height: 1.3;
   }
 
   .cta p {
-    font-size: 20px;
-    line-height: 25px;
-    margin: 20px 0 40px 0;
+    font-size: 1.1rem;
+    margin: 20px 0 30px 0;
   }
 
-  .cta .btn {
-    font-size: 20px;
-    padding: 15px 50px;
+  .btn {
+    font-size: 1rem;
+    padding: 16px 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+
+  .cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 14px 30px;
+    font-size: 0.95rem;
   }
 }
 

@@ -1,64 +1,210 @@
 
-.productCardImg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 300px;
-    height: 300px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    border-radius: 15px;
-    transition: 0.2s;
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 45px;
+  padding: 30px 25px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 12px 40px rgba(107, 127, 90, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-.productCardImg:hover{
-    transform: scale(1.1);
-    transition: 0.2s;
+.productCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(163, 196, 157, 0.05) 0%,
+    rgba(194, 212, 179, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
-
-.productCard .precio{
-    font-weight: bold;
-    color: #95AB63;
-}
-.productCard p{
-    padding-top: .5em;
-    color: #10222B;
-    font-family: 'europa';
-    font-weight: lighter;
-    font-size: 20px;
-    text-align: center;
-}
-.productCard{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-.productCard button{
-    margin: .5em 0em;
-
+.productCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 60px rgba(107, 127, 90, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
 }
 
+.productCard:hover::before {
+  opacity: 1;
+}
+
+.productCardImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(122, 139, 90, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.productCardImg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(199, 210, 184, 0.1) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.productCardImg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(122, 139, 90, 0.25);
+}
+
+.productCardImg:hover::before {
+  opacity: 1;
+}
+
+.productCardInfo {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.productCard p {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--charcoal-gray);
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.productCard .precio {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--zen-sage);
+  margin: 15px 0 20px 0;
+  text-shadow: 1px 1px 2px rgba(122, 139, 90, 0.2);
+}
 
 .btn {
-    background-color: #95ab63;
-    padding: 10px 20px;
-    border-radius: 50px;
-    border: 1px solid #95ab63;
-    cursor: pointer;
-    font-family: 'europa';
-    font-weight: lighter;
-    font-size: 18px;
-    color: #f6ffe0;
+  background: linear-gradient(135deg, var(--zen-sage) 0%, var(--bamboo-green) 100%);
+  color: var(--mist-white);
+  border: 2px solid transparent;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(122, 139, 90, 0.3);
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(122, 139, 90, 0.4);
+  border-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, var(--bamboo-green) 0%, var(--zen-sage) 100%);
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(122, 139, 90, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .productCard {
+    margin-bottom: 30px;
+    padding: 15px;
   }
-  
-  .btn:hover {
-    border: 1px solid black;
-    color:black;
-    background: none;
-    transition: 0.2s;
+
+  .productCardImg {
+    width: 240px;
+    height: 240px;
+    margin-bottom: 20px;
   }
+
+  .productCard p {
+    font-size: 1.1rem;
+  }
+
+  .productCard .precio {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .productCard {
+    padding: 12px;
+  }
+
+  .productCardImg {
+    width: 200px;
+    height: 200px;
+  }
+
+  .productCard p {
+    font-size: 1rem;
+  }
+
+  .productCard .precio {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 9px 20px;
+    font-size: 0.9rem;
+  }
+}
   

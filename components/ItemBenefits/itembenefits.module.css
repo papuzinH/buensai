@@ -1,49 +1,169 @@
 .itemBenefit {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 2em 0em;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 35px;
+  padding: 35px 30px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 8px 32px rgba(107, 127, 90, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.itemBenefit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(163, 196, 157, 0.03) 0%,
+    rgba(194, 212, 179, 0.05) 50%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.itemBenefit:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 16px 48px rgba(107, 127, 90, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .itemBenefit_icon {
-  background-color: #95ab63;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  flex-shrink: 0;
+  width: 75px;
+  height: 75px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-right: 16px;
+  justify-content: center;
+  background: var(--nature-gradient-primary);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 8px 25px rgba(107, 127, 90, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.itemBenefit_icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.itemBenefit:hover .itemBenefit_icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 25px rgba(122, 139, 90, 0.4);
+}
+
+.itemBenefit:hover .itemBenefit_icon::before {
+  left: 100%;
 }
 
 .itemBenefit_icon svg {
-  width: 40px;
+  color: var(--mist-white) !important;
+  font-size: 1.8rem !important;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.itemBenefit:hover .itemBenefit_icon svg {
+  transform: scale(1.1);
+}
+
+.itemBenefit_text {
+  flex: 1;
+  position: relative;
+  z-index: 2;
 }
 
 .itemBenefit_text h3 {
-  font-family: europa, sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 25px;
-  color: #10222b;
-  margin-bottom: 5px;
-  margin-top: 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--charcoal-gray);
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+  transition: color 0.3s ease;
 }
 
-.itemBenefit p {
-  font-family: europa, sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 16px;
-  color: #95ab63;
+.itemBenefit:hover .itemBenefit_text h3 {
+  color: var(--zen-sage);
+}
+
+.itemBenefit_text p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--stone-gray);
+  line-height: 1.6;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.itemBenefit:hover .itemBenefit_text p {
+  color: var(--charcoal-gray);
 }
 
 @media screen and (max-width: 768px) {
-  .itemBenefit_text {
-    margin-left: 10px;
+  .itemBenefit {
+    padding: 20px;
+    margin-bottom: 25px;
+    gap: 15px;
   }
-  .itemBenefit_icon{
-    display: none;
+
+  .itemBenefit_icon {
+    width: 60px;
+    height: 60px;
   }
-  
+
+  .itemBenefit_text h3 {
+    font-size: 1.2rem;
+  }
+
+  .itemBenefit_text p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .itemBenefit {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .itemBenefit_icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .itemBenefit_text h3 {
+    font-size: 1.1rem;
+  }
+
+  .itemBenefit_text p {
+    font-size: 0.9rem;
+  }
 }
