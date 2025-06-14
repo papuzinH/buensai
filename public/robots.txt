@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://buensai.vercel.app/sitemap.xml
+
+# Disallow admin areas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /checkout
+
+# Allow important pages
+Allow: /
+Allow: /products
+Allow: /aboutus
+Allow: /singleProduct/

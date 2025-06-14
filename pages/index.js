@@ -1,13 +1,8 @@
 import Head from 'next/head';
-//import Image from 'next/image';
-import styles from '../styles/Home.module.css';
 import Navbar from '../components/Navbar/Navbar';
 import Features from '../components/Features/Features';
 import Footer from '../components/Footer/Footer';
-import ItemBenefits from '../components/ItemBenefits/ItemBenefits';
 import Hero from '../components/Hero/Hero';
-import { useState } from 'react';
-import CardFeature from '../components/CardFeature/CardFeature';
 import { faLightbulb, faSmile } from '@fortawesome/free-regular-svg-icons';
 import { faWind, faLeaf } from '@fortawesome/free-solid-svg-icons';
 //import { doc } from 'prettier';
@@ -40,12 +35,6 @@ const dataItems = [
 ];
 
 export default function Home() {
-  const [cardsFeature, setCardsFeature] = useState(['Destacados', 'Nuevos Bonsais', 'Descuentos']);
-
-  const showCardsFeature = () => {
-    return cardsFeature.map((card, index) => <CardFeature key={index} text={card} />);
-  };
-
   const dataPage = { page: 'index' };
 
   return (
