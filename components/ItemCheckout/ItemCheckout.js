@@ -8,7 +8,7 @@ const ItemCheckout = ({ image, name, price, indice, quantity }) => {
   const cart = useContext(CartContext);
   return (
     <div className={`${styles['container']}`}>
-      <Image src={image} alt={name} width="100px" height="100px"></Image>
+      <Image src={image} alt={name} width={100} height={100} style={{ objectFit: 'cover' }} />
       <div className={`${styles['containerText']}`}>
         <h2>{name}</h2>
         <p>Cantidad: {quantity}</p>

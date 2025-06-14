@@ -10,7 +10,7 @@ import { useRouter } from 'next/router';
 
 const Features = ({ dataItems }) => {
   const router = useRouter();
-  
+
   return (
     <>
       <div id="features" className={`${styles['features_section']}`}>

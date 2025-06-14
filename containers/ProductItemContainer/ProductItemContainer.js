@@ -6,12 +6,14 @@ import grid from '../../styles/grid.module.css';
 
 const ProductItemContainer = (props) => {
   return (
-    <div className='inner'>
+    <div className="inner">
       <div className={`${grid.grid} ${styles.prod_item_container}`}>
-        <div className={`${grid.col_6} ${styles.slider_container}`}>
+        <div className={`${grid.col_6} ${grid.col_in_12} ${styles.slider_container}`}>
           <SliderProduct images={props.product.slider} />
         </div>
-        <ProductDescriptionContainer addToCart={props.addToCart} product={props.product} />
+        <div className={`${grid.col_6} ${grid.col_in_12}`}>
+          <ProductDescriptionContainer addToCart={props.addToCart} product={props.product} />
+        </div>
       </div>
     </div>
   );

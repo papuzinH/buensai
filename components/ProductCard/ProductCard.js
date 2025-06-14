@@ -6,7 +6,7 @@ const ProductCard = ({ imagen, nombre, precio, goToProduct }) => {
   return (
     <div className={styles['productCard']}>
       <div className={styles['productCardImg']}>
-        <Image src={imagen} alt={nombre} width={'228px'} height={'228px'}></Image>
+        <Image src={imagen} alt={nombre} width={228} height={228} style={{ objectFit: 'cover' }} />
       </div>
       <div className={styles['productCardInfo']}>
         <p>{nombre}</p>

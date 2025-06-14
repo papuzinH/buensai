@@ -1,12 +1,12 @@
 .features_container {
-  padding-top: 120px;
+  padding-top: 60px;
   display: flex;
   flex-direction: column;
 }
 
 .features_section {
   position: relative;
-  padding: 120px 0 140px;
+  padding: 80px 0 140px;
   background: var(--mist-gradient);
   overflow: hidden;
 }

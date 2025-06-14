@@ -1,7 +1,7 @@
 
 .card {
   position: relative;
-  padding: 50px 35px;
+  padding: 40px 30px;
   border-radius: 28px;
   display: flex;
   align-items: flex-end;
@@ -96,8 +96,7 @@
     rgba(122, 139, 90, 0.1) 0%,
     rgba(199, 210, 184, 0.2) 100%
   ), url('../../public/assets/feature-1.jpg');
-  grid-column-start: 2;
-  grid-column-end: 5;
+  grid-column: span 4;
 }
 
 .card:nth-of-type(2) {
@@ -106,8 +105,7 @@
     rgba(143, 163, 115, 0.1) 0%,
     rgba(168, 196, 162, 0.2) 100%
   ), url('../../public/assets/feature-2.jpg');
-  grid-column-start: 5;
-  grid-column-end: 9;
+  grid-column: span 4;
 }
 
 .card:nth-of-type(3) {
@@ -116,8 +114,7 @@
     rgba(199, 210, 184, 0.1) 0%,
     rgba(122, 139, 90, 0.2) 100%
   ), url('../../public/assets/feature-3.jpg');
-  grid-column-start: 9;
-  grid-column-end: 12;
+  grid-column: span 4;
 }
 
 .card p {
@@ -156,11 +153,25 @@
   transform: translateX(5px);
 }
 
+@media screen and (max-width: 1200px) {
+  .card:nth-of-type(1) {
+    grid-column: span 6;
+  }
+
+  .card:nth-of-type(2) {
+    grid-column: span 6;
+  }
+
+  .card:nth-of-type(3) {
+    grid-column: span 12;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .card {
     font-size: 1rem;
     padding: 25px 20px;
-    min-height: 250px;
+    min-height: 180px;
     background-image: none !important;
   }
 
@@ -177,18 +188,15 @@
   }
 
   .card:nth-of-type(1) {
-    grid-column-start: 1;
-    grid-column-end: 13;
+    grid-column: span 12;
   }
 
   .card:nth-of-type(2) {
-    grid-column-start: 1;
-    grid-column-end: 13;
+    grid-column: span 12;
   }
 
   .card:nth-of-type(3) {
-    grid-column-start: 1;
-    grid-column-end: 13;
+    grid-column: span 12;
   }
 
   .card:nth-of-type(3) .textAndButton {
